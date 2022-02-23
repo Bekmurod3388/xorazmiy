@@ -18,6 +18,8 @@ Route::get('/news',[App\Http\Controllers\PostController::class, 'news'])->name('
 Route::get('/news/{post}', [App\Http\Controllers\PostController::class, 'show'])->name('news-item');
 Route::view('/about','about')->name('about');
 Route::view('/director','director')->name('director');
+Route::view('/spirituality','spirit')->name('spirit');
+Route::view('/train','train')->name('train');
 Auth::routes([
     'confirm' => false,
     'login' => true,

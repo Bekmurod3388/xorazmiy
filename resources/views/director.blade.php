@@ -77,7 +77,7 @@
                                 </div> <!-- singel dashboard -->
                                 <div class="singel-dashboard pt-40">
                                     <h5>Bog'lanish uchun:</h5>
-                                    <p><i class="fa fa-phone"></i>Tel: </p>
+                                    <p><i class="fa fa-phone"></i>Tel: <b>+998934532827</b></p>
                                     <p><i class = "fa fa-envelope"></i> E-pochta: </p>
                                     <p>Qabul kunlari: Dushanba - Juma soat 10<sup>00</sup> dan 12<sup>00</sup> gacha</p>
                                 </div> <!-- singel dashboard -->

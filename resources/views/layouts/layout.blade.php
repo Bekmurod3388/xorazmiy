@@ -136,8 +136,8 @@
                                     <a class="nav-item {{  request()->routeIs('director') ? 'active' : '' }}" href="#">Tuzilma</a>
                                     <ul class="sub-menu">
                                         <li><a class="nav-item {{  request()->routeIs('director') ? 'active' : '' }}" href="{{route('director')}}">Direktor</a></li>
-                                        <li><a href="courses-singel.html">O'quv ishlari bo'yicha direktor o'rinbosari</a></li>
-                                        <li><a href="courses-singel.html">Ma'naviy va ma'rifiy ishlar bo'yicha direktor o'rinbosari</a></li>
+                                        <li><a class="nav-item {{  request()->routeIs('train') ? 'active' : '' }}" href="{{route('train')}}">O'quv ishlari bo'yicha direktor o'rinbosari</a></li>
+                                        <li><a class="nav-item {{  request()->routeIs('spirit') ? 'active' : '' }}" href="{{route('spirit')}}">Ma'naviy va ma'rifiy ishlar bo'yicha direktor o'rinbosari</a></li>
                                         <li><a href="courses-singel.html">Ixtisoslashgan fanlar bo'yicha direktor o'rinbosari</a></li>
                                     </ul>
                                 </li>
