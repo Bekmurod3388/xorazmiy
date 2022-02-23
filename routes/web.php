@@ -20,6 +20,7 @@ Route::view('/about','about')->name('about');
 Route::view('/director','director')->name('director');
 Route::view('/spirituality','spirit')->name('spirit');
 Route::view('/train','train')->name('train');
+Route::view('/special','special')->name('special');
 Auth::routes([
     'confirm' => false,
     'login' => true,

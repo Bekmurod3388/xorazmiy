@@ -5,7 +5,7 @@
 
 <!--====== PAGE BANNER PART START ======-->
 
-<section id="page-banner" class="pt-0 pb-130 bg_cover" data-overlay="8" style="background-image: url({{asset('fasset/images/director.jpg')}});">
+<section id="page-banner" class="pt-0 pb-130 bg_cover" data-overlay="8" style="background-image: url({{asset('fasset/images/slide1.jpg')}});">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
