@@ -57,15 +57,29 @@
                             <div class="dashboard-cont">
                                 <div class="singel-dashboard pt-40">
                                     <h5>Ma'lumotnoma</h5>
-                                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                    <p>1976 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 1998-yilda Toshkent davlat universitetini tugatgan.</p>
                                 </div> <!-- singel dashboard -->
                                 <div class="singel-dashboard pt-40">
                                     <h5>Kasbiy faoliyati</h5>
-                                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                   <p><p>1993-1998 yy. – Toshkent davlat universiteti talabasi <br>
+                                        1998-2008 yy. – Shovot tuman 37-umumiy o'rta ta'lim maktabida fizika fani o'qituvchisi
+                                        <br>
+                                        2008-2011 yy. - Shovot tuman 37-umumiy o'rta ta'lim maktabi direktori <br>
+                                        2011-2016 yy. – Toshkent axborot texnologiyalari universiteti Urganch filiali qoshidagi 1-son akademik litsey “Aniq fanlar” yo'nalishi bo'lim boshlig'i
+                                        <br>
+                                        2016- 2017yy.  - Shovot tuman 36-umumiy o'rta ta'lim maktabi direktori <br>
+                                        2017-2021yy   – Ayrim fanlar chuqur o'rganiladigan 1-ixtisoslashtirilgan maktab-internati
+
+                                        direktori    <br>
+                                        2021 y. h.v      – Xorazm viloyati Shovot tumani  Al-Xorazmiy nomidagi Xalqaro fizika
+                                        va matematika  maktab-internat direktori <br>
+                                    </p></p>
                                 </div> <!-- singel dashboard -->
                                 <div class="singel-dashboard pt-40">
                                     <h5>Bog'lanish uchun:</h5>
-                                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                    <p><i class="fa fa-phone"></i>Tel: </p>
+                                    <p><i class = "fa fa-envelope"></i> E-pochta: </p>
+                                    <p>Qabul kunlari: Dushanba - Juma soat 10<sup>00</sup> dan 12<sup>00</sup> gacha</p>
                                 </div> <!-- singel dashboard -->
                             </div> <!-- dashboard cont -->
                         </div>
