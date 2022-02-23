@@ -1,7 +1,7 @@
 
 /* --------------------------------------------
 Google Map
--------------------------------------------- */	
+-------------------------------------------- */
 
 function basicmap() {
         // Basic options for a simple Google Map
@@ -95,7 +95,7 @@ function basicmap() {
 ]
 
         };
-        // Get the HTML DOM element that will contain your map 
+        // Get the HTML DOM element that will contain your map
         // We are using a div with id="map" seen below in the <body>
         var mapElement = document.getElementById('contact-map');
 
@@ -112,6 +112,6 @@ function basicmap() {
     if ($('#contact-map').length != 0) {
         google.maps.event.addDomListener(window, 'load', basicmap);
     }
-    
+
 
 
