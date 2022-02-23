@@ -105,5 +105,5 @@
     </section>
 
     <!--====== EVENTS PART ENDS ======-->
-
+    <x-layouts.footer></x-layouts.footer>
 @endsection

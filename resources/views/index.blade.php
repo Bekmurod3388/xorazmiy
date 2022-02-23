@@ -771,4 +771,6 @@
     <!--====== PATNAR LOGO PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
+    <x-layouts.footer></x-layouts.footer>
     @endsection
+

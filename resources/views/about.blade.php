@@ -187,5 +187,5 @@
 </div>
 <!--====== PATNAR LOGO PART ENDS ======-->
 
-
+<x-layouts.footer></x-layouts.footer>
 @endsection

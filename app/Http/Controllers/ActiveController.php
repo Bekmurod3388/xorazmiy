@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Active;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class PostController extends Controller
+class ActiveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id', 'desc')->get();
-        return view('admin.posts.index')->with('posts', $posts);
+        $posts = Active::orderBy('id', 'desc')->get();
+        return view('admin.active.index')->with('posts', $posts);
     }
 
     /**
@@ -27,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        return view('admin.active.create');
+
     }
 
     /**
@@ -39,97 +39,93 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'header' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            'desc' => 'required',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
         $uuid = Str::uuid()->toString();
         $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-        $request->img->move(public_path('../storage/app/public/posts'), $fileName);
-        Post::create([
-            'header' => $request->header,
-            'description' => $request->description,
+        $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
+        Active::create([
+            'name' => $request->name,
+            'desc' => $request->desc,
             'img' => $fileName,
 
 
         ]);
-        return redirect()->route('admin.posts.index')->with('success', 'Yangilik muvaffaqiyatli qo\'shildi.');
+        return redirect()->route('admin.active.index')->with('success', 'Faol qo\'shildi');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Active $active
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Post $post)
+    public function show(Active $active)
     {
-        Post::where('id', $post->id)
-            ->update([
-                'viewed' => DB::raw('viewed+1'),
-
-            ]);
-        return view('news-item.news-item', compact('post'));
+        return view('active', compact('active'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Active $active
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit(Post $post)
+    public function edit(Active $active)
     {
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.active.edit', ['posts'=>$active]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Active $active
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Active $active)
     {
         $request->validate([
-            'header' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            'desc' => 'required',
             'img' => '',
         ]);
         if ($request->hasFile('img')) {
             $uuid = Str::uuid()->toString();
             $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-            $request->img->move(public_path('../storage/app/public/posts'), $fileName);
-            $post->update([
-                'header' => $request->header,
-                'description' => $request->description,
+            $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
+            $active->update([
+                'name' => $request->name,
+                'desc' => $request->desc,
                 'img' => $fileName,
             ]);
         } else {
-            $post->update($request->all());
+            $active->update($request->all());
         }
 
 
-        return redirect()->route('admin.posts.index')
-            ->with('success', 'Новости успешно обновлено');
+        return redirect()->route('admin.active.index')
+            ->with('success', 'Faol yangilandi');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Active $active
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Post $post)
+    public function destroy(Active $active)
     {
-        $post->delete();
+        $active->delete();
 
-        return redirect()->route('admin.posts.index')
-            ->with('success', 'Новости успешно удалено');
+        return redirect()->route('admin.active.index')
+            ->with('success', 'Faol o\'chirildi');
     }
-    public function news() {
-        $posts = Post::orderBy('id', 'desc')->get();
-        return view('news-item.news')->with('posts', $posts);
+    public function actives() {
+        $posts = Active::orderBy('id', 'desc')->get();
+        return view('actives')->with('posts', $posts);
     }
 }
