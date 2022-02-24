@@ -32,7 +32,7 @@ Route::get('/olimpians', [App\Http\Controllers\OlimpicController::class, 'olimpi
 Route::get('/olimpian/{olimpic}', [App\Http\Controllers\OlimpicController::class, 'show'])->name('olimpian');
 Route::get('/actives', [App\Http\Controllers\ActiveController::class, 'actives'])->name('actives');
 Route::get('/active/{active}', [App\Http\Controllers\ActiveController::class, 'show'])->name('active');
-
+Route::post('/contact', [\App\Http\Controllers\MessageController::class, 'store'])->name('messages.store');
 Auth::routes([
     'confirm' => false,
     'login' => true,
@@ -52,6 +52,8 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('teacher', App\Http\Controllers\TeacherController::class);
     Route::resource('olimpic', App\Http\Controllers\OlimpicController::class);
     Route::resource('active', App\Http\Controllers\ActiveController::class);
+    Route::resource('messages', App\Http\Controllers\MessageController::class);
+
 
 
 

@@ -57,7 +57,7 @@ class UserController extends Controller
 
 
     public function edit(User $user) {
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.form', compact('user'));
     }
 
 
@@ -65,7 +65,7 @@ class UserController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'surname' => 'required',
+
             'password' => 'confirmed'
         ]);
 

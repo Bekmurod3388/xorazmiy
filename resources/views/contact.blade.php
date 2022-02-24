@@ -29,35 +29,35 @@
                             <h2>Hoziroq bog'laning</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
-                            <form id="contact-form" action="#" method="post" data-toggle="validator">
+                            <form id="contactForm" accept-charset="UTF-8">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="name" type="text" placeholder="Ismingiz" data-error="Ism to'ldirilishi shart" required="required">
+                                            <input name="name" type="text" id = "name" placeholder="Ismingiz" data-error="Ism to'ldirilishi shart" required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="email" type="email" placeholder="Email" data-error="Pochtangizni yozishingiz shart" required="required">
+                                            <input name="email" type="email" id="email" placeholder="Email" data-error="Pochtangizni yozishingiz shart" required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="subject" type="text" placeholder="Fan" data-error="Fan sohasi to'ldirilishi shart" required="required">
+                                            <input name="subject" type="text" id = "subject" placeholder="Fan" data-error="Fan sohasi to'ldirilishi shart" required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="phone" type="text" placeholder="Telefon raqam" data-error="Telefon raqamni kiritishingiz shart" required="required">
+                                            <input name="phone" type="text" id = "phone" placeholder="Telefon raqam" data-error="Telefon raqamni kiritishingiz shart" required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <textarea name="messege" placeholder="Xabar" data-error="Iltimos xabaringizni kiriting" required="required"></textarea>
+                                            <textarea name="messege" placeholder="Xabar" id ="message" data-error="Iltimos xabaringizni kiriting" required="required"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
@@ -116,4 +116,44 @@
         </div> <!-- container -->
     </section>
 <x-layouts.footer></x-layouts.footer>
-    @endsection
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+        var modalAjax = document.querySelector('.modal-back')
+        if(modalAjax)modalAjax.classList.add("modal__disable");
+        document.documentElement.style.removeProperty('overflow');
+        document.documentElement.style.paddingRight = '0';
+        let name = $('#name').val();
+        let phone = $('#phone').val();
+        let email = $('#email').val();
+        let subject = $('#subject').val();
+        let message = $('#message').val();
+        $.ajax({
+            url: "{{route('messages.store')}}",
+            type: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                name: name,
+                phone: phone,
+                email: email,
+                subject: subject,
+                message: message,
+            },
+            success: function (response) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Muvaffaqiyatli jo\'natildi',
+                })
+            },
+            fail: function (response) {
+                Swal.fire({
+                    icon: 'fail',
+                    title: 'Xatolik',
+                })
+            }
+        });
+    });
+</script>
+@endsection

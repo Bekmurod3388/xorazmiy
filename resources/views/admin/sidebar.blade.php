@@ -50,6 +50,12 @@
                         <p>Faol o'quvchilar</p>
                     </a>
                 </li>
+                <li class="nav-item {{  request()->routeIs('admin.messages.index') ? 'active' : '' }}">
+                    <a href="{{route('admin.messages.index')}}">
+                        <i class="fas fa-user"></i>
+                        <p>Xabarlar</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

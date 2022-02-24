@@ -44,7 +44,9 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{asset('fasset/css/responsive.css')}}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -90,7 +92,7 @@
                     <div class="logo">
                         <a href="{{route('index')}}">
                             <img src="{{asset('logo.jpg')}}" align="left" hspace = "5px" width="100px" alt="Logo">
-                            Xorazm viloyat Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab-nternati
+                            Xorazm viloyat Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab-internati
                         </a>
                     </div>
                 </div>

@@ -39,11 +39,7 @@
                                           id="form_{{$user->id}}">
                                         @method('DELETE')
                                         @csrf
-                                        <button type="button"
-                                                onclick="update('{{route('admin.users.update', ['user' => $user])}}', '{{$user->name}}', '{{$user->surname}}', '{{$user->email}}')" class="btn btn-warning"
-                                                title="O&#8216;zgartirish"><i class="fas fa-pencil-alt"></i>
-                                        </button>
-
+                                        <a href="{{route('admin.users.edit',$user->id)}}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
                                         <button type="button" class="btn btn-danger disabled" onclick="remove(this.parentNode)"
                                                 title="O&#8216;chirish">
                                             <i class="fas fa-trash-alt"></i>

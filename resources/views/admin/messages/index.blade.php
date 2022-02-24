@@ -9,32 +9,37 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered ">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Ism</th>
-                            <th scope="col">Tel raqami</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Qachon</th>
-                            <th scope="col">Amallar</th>
+                            <th>#</th>
+                            <th>Ism</th>
+                            <th>Tel raqami</th>
+                            <th class="col-1" >Email</th>
+                            <th>Qachon</th>
+                            <th class="col-1">Fan</th>
+                            <th class="col-1">Xabar</th>
+
+                            <th>Amallar</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($messages as $counter => $message)
                             <tr>
-                                <th scope="row" class="col-md-1">{{ ($messages->total()) - (($messages->currentPage()-1) * $messages->perPage() + $counter)  }}</th>
+                                <th>{{$message->id}}</th>
                                 <td>{{$message->name}}</td>
                                 <td>{{$message->phone}}</td>
                                 <td>{{$message->email}}</td>
                                 <td>{{$message->created_at}}</td>
+                                <td>{{$message->subject}}</td>
+                                <td>{{$message->message}}</td>
                                 <td class="col-md-3">
                                     <form action="{{ route('admin.messages.destroy',$message->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger"><span class="btn-label">
                                         <i class="fa fa-trash"></i>
-                                    </span>O'chirish</button>
+                                    </span></button>
                                     </form>
                                 </td>
                             </tr>
@@ -42,8 +47,8 @@
 
                         </tbody>
                     </table>
-                    {!! $messages->links() !!}
                 </div>
+
             </div>
         </div>
     </div>
