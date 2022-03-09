@@ -53,7 +53,7 @@
                             <li><a href="#"><i class="fa fa-calendar"></i>{{$post->created_at->format('d.M.Y')}}</a></li>
                             <li><a href="#"><i class="fa fa-eye"></i>Ko'rildi: {{$post->viewed}}</a></li>
                         </ul>
-                        <p>{{$post->description}}</p>
+                        <p>{{ \Illuminate\Support\Str::limit($post->description, 150, '...') }}</p>
                     </div>
 
                 </div> <!-- singel blog -->

@@ -21,16 +21,16 @@
                     @endif
 
 
-                    <form action="{{route('admin.posts.update',$posts)}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <form action="{{route('admin.posts.update',$post)}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
                             <label for="header">Sarlavha</label>
-                            <input type="text" name="header" class="form-control" id="header" placeholder="Sarlavha" value="{{$posts->header}}">
+                            <input type="text" name="header" class="form-control" id="header" placeholder="Sarlavha" value="{{$post->header}}">
                         </div>
                         <div class="form-group">
                             <label for="description">Matn</label>
-                            <textarea  class="form-control"  name="description" id="description" rows="10">{!! $posts->description !!}</textarea>
+                            <textarea  class="form-control"  name="description" id="description" rows="10">{!! $post->description !!}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
