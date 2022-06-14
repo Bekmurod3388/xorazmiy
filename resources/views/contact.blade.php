@@ -91,7 +91,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>+998-(93)-453-28-27</p>
+                                        <p>+998-(97)-453-28-27</p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>
