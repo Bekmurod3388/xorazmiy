@@ -104,7 +104,7 @@
                             </div>
                             <div class="cont">
                                 <p>Hoziroq biz bilan bog'laning</p>
-                                <span>+998-(93)-453-28-27</span>
+                                <span>+998-(97)-453-28-27</span>
                             </div>
                         </div>
                         {{--<div class="button float-left">
