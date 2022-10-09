@@ -101,7 +101,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Ixm309@piima.uz</p>
+                                        <p>ixm309@piima.uz</p>
 
                                     </div>
                                 </div> <!-- singel address -->

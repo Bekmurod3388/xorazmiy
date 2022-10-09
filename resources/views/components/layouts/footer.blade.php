@@ -6,15 +6,15 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-about mt-40">
                         <div class="logo">
-                            <a href="#"><img src="{{asset('logo.svg')}}" width="160px" alt="Logo"></a>
+                            <a href="#"><img src="{{asset('logo.svg')}}" width="160px" alt="Logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%"></a>
                         </div>
-                        <p> Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</p>
-                        <ul class="mt-20">
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
+                        <p class="header"> Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</p>
+{{--                        <ul class="mt-20">--}}
+{{--                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>--}}
+{{--                        </ul>--}}
                     </div> <!-- footer about -->
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -66,7 +66,7 @@
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>Ixm309@piima.uz</p>
+                                    <p>ixm309@piima.uz</p>
                                 </div>
                             </li>
                         </ul>

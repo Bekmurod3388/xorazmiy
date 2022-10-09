@@ -36,6 +36,7 @@
     <!--====== Fontawesome css ======-->
     <link rel="stylesheet" href="{{asset('fasset/css/font-awesome.min.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!--====== Default css ======-->
     <link rel="stylesheet" href="{{asset('fasset/css/default.css')}}">
 
@@ -77,7 +78,7 @@
                 <div class="header-contact  text-center">
                     <ul>
                         <li><img src="{{asset('fasset/images/all-icon/map.png')}}" alt="icon"><span>O'zbekiston Respublikasi, Xorazm viloyati, Shovot tumani, K. Otaniyozov ko'chasi, 65-uy</span></li>
-                        <li><img src="{{asset('fasset/images/all-icon/email.png')}}" alt="icon"><span>Ixm309@piima.uz</span></li>
+                        <li><img src="{{asset('fasset/images/all-icon/email.png')}}" alt="icon"><span>ixm309@piima.uz</span></li>
                     </ul>
                 </div>
 
@@ -85,14 +86,14 @@
         </div> <!-- container -->
     </div> <!-- header top -->
 
-    <div class="header-logo-support pt-30 pb-30">
+    <div class="header-logo-support pt-10 pb-10">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
                         <a href="{{route('index')}}">
-                            <img src="{{asset('logo-star.svg')}}" align="left" hspace = "5px" width="100px" alt="Logo">
-                            Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati
+                            <img src="{{asset('logo-star.svg')}}" align="left" hspace = "5px" width="70px" alt="Logo">
+                            <p class="header">Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</p>
                         </a>
                     </div>
                 </div>
