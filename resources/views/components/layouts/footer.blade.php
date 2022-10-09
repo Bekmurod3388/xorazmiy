@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright text-md-left text-center pt-15">
-                        <p><a target="_blank" href="https://www.amusoft.uz">amusoft.uz</a> </p>
+                        <p><a target="_blank" href="http://www.amusoft.uz">amusoft.uz</a> </p>
                     </div>
                 </div>
                 <div class="col-md-4">
