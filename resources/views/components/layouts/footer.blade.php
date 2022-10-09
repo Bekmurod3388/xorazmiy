@@ -6,9 +6,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-about mt-40">
                         <div class="logo">
-                            <a href="#"><img src="{{asset('logo.jpg')}}" width="160px" alt="Logo"></a>
+                            <a href="#"><img src="{{asset('logo.svg')}}" width="160px" alt="Logo"></a>
                         </div>
-                        <p> Xorazm viloyat Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab-internati</p>
+                        <p> Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</p>
                         <ul class="mt-20">
                             <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -66,7 +66,7 @@
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>al.xorazmiy2021@gmail.com</p>
+                                    <p>Ixm309@piima.uz</p>
                                 </div>
                             </li>
                         </ul>
@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright text-md-left text-center pt-15">
-                        <p><a target="_blank" href="https://www.w3soft.uz">w3soft.uz</a> </p>
+                        <p><a target="_blank" href="https://www.amusoft.uz">amusoft.uz</a> </p>
                     </div>
                 </div>
                 <div class="col-md-4">
