@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Al-Xorazmiy nomidagi maktab internat</title>
+    <title> Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{asset('fasset/images/favicon.png')}}" type="image/png">
