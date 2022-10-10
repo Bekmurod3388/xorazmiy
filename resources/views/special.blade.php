@@ -80,10 +80,11 @@
                                             <br>
                                             2013-2015 yy.  – Xorazm  viloyati  Shovot tumanidagi  ayrim  fanlar  chuqur  o'rganiladigan  1-ixtisoslashtirilgan  davlat  umumta'lim maktab-internatining  tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
                                             <br>
-                                            2015-2021yy. – Xorazm  viloyati  Shovot tumanidagi  ayrim  fanlar  chuqur  o'rganiladigan   1-ixtisoslashtirilgan  davlat  umumta'lim maktab-internati  internatida  ixtisoslashtirilgan  fanlar bo'yicha  direktor o'rinbosari, tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
+                                            2015-2021 yy. – Xorazm  viloyati  Shovot tumanidagi  ayrim  fanlar  chuqur  o'rganiladigan   1-ixtisoslashtirilgan  davlat  umumta'lim maktab-internati  internatida  ixtisoslashtirilgan  fanlar bo'yicha  direktor o'rinbosari, tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
                                             <br>
-                                            2021 yil  martidan – Xorazm  viloyati  Shovot tumanidagi  Al-Xorazmiy nomidagi Xalqaro fizika va matematika maktab-internatida  ixtisoslashtirilgan  fanlar bo'yicha  direktor o'rinbosari, tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
+                                            2021-2022 yy. – Xorazm  viloyati  Shovot tumanidagi  Al-Xorazmiy nomidagi Xalqaro fizika va matematika maktab-internatida  ixtisoslashtirilgan  fanlar bo'yicha  direktor o'rinbosari, tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
                                             <br>
+                                            2022 y. h.v - Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internatida ixtisoslashtirilgan  fanlar bo'yicha  direktor o'rinbosari, tasviriy  san'at  va chizmachilik  fani  o'qituvchisi
 
                                         </p>
                                     </div> <!-- singel dashboard -->

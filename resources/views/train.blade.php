@@ -62,17 +62,18 @@
                                     <div class="singel-dashboard pt-40">
                                         <h5>Kasbiy faoliyati</h5>
                                         <p>
-                                            1984-1991 yy.-   Samarqand davlat  universiteti talabasi <br>
-                                            1986-1988 yy -   Xarbiy xizmatda <br>
-                                            1991-1992 yy .-  Xorazm viloyati Shovot tumanidagi Krupskaya nomli maktabda  o'qituvchi
+                                            1984-1991 yy. -  Samarqand davlat  universiteti talabasi <br>
+                                            1986-1988 yy. -  Xarbiy xizmatda <br>
+                                            1991-1992 yy. -  Xorazm viloyati Shovot tumanidagi Krupskaya nomli maktabda  o'qituvchi
                                             <br>
-                                            1992-2010 yy-    Xorazm viloyati Shovot tumanidagi 1-IMI da tarbiyachi <br>
-                                            2011-2021 yy.  - Xorazm viloyati Shovot tumanidagi 1-IMI da  O'IB direktor o'rinbosari
+                                            1992-2010 yy. -  Xorazm viloyati Shovot tumanidagi 1-IMI da tarbiyachi <br>
+                                            2011-2021 yy. -  Xorazm viloyati Shovot tumanidagi 1-IMI da  O'IB direktor o'rinbosari
                                             <br>
-                                            2021 y. h.v       -  Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi Xalqaro fizika va
+                                            2021-2022 yy. -  Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi Xalqaro fizika va
                                             matematika maktab-internatida  o'quv ishlari bo'yicha direktor  o'rinbosari
                                             <br>
-
+                                            2022 y. h.v   -  Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan
+                                            maktab-internatida o'quv ishlari bo'yicha direktor  o'rinbosari
                                         </p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">

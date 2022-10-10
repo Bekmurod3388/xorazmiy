@@ -71,8 +71,9 @@
 
                                         2019-2021 yy   -    Xorazm viloyat Shovot tumani 1-IMI da ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
                                         <br>
-                                        2021 yil martidan  -  Xorazm viloyati Shovot tumani Al-xorazmiy nomidagi Xalqaro fizika va matematika maktab-internatida ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
+                                        2021-2022 yy   -  Xorazm viloyati Shovot tumani Al-xorazmiy nomidagi Xalqaro fizika va matematika maktab-internatida ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
                                         <br>
+                                        2022 y. h.v - Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internatida ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
                                     </p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
