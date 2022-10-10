@@ -21,10 +21,9 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nomi</th>
+                            <th scope="col">Sarlavha</th>
                             <th scope="col">Tekst</th>
-                            <th scope="col">Ustozi</th>
-                            <th scope="col">Ko'rilgan</th>
+                            <th scope="col">File nomi</th>
                             <th scope="col">Amallar</th>
                         </tr>
                         </thead>
@@ -32,13 +31,12 @@
                         @foreach($library as $new)
                             <tr>
                                 <th scope="row" class="col-1">{{$new->id}}</th>
-                                <td>{{$new->name}}</td>
+                                <td>{{$new->title}}</td>
                                 <td>{{$new->description}}</td>
-                                <td>{{$new->teacher}}</td>
-                                <td>{{$new->viewed}}</td>
+                                <td>{{$new->file}}</td>
                                 <td class="col-2">
-                                    <form action="{{ route('admin.circle.destroy',$new->id) }}" method="POST">
-                                        <a class="btn btn-warning btn-sm" href="{{ route('admin.circle.edit',$new->id) }}">
+                                    <form action="{{ route('admin.electroniclibrary.destroy',$new->id) }}" method="POST">
+                                        <a class="btn btn-warning btn-sm" href="{{ route('admin.electroniclibrary.edit',$new->id) }}">
                                     <span class="btn-label">
                                         <i class="fa fa-pen"></i>
                                     </span>

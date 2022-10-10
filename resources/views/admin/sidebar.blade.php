@@ -72,9 +72,9 @@
                         <p> Ota - onalar</p>
                     </a>
                 </li>
-                <li class="nav-item {{  request()->routeIs('admin.circle.index') ? 'active' : '' }}">
+                <li class="nav-item {{  request()->routeIs('admin.electroniclibrary.index') ? 'active' : '' }}">
                     <a href="{{route('admin.electroniclibrary.index')}}">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-book-reader"></i>
                         <p>Elektron kutubxona</p>
                     </a>
                 </li>
