@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ElectronicLibrary;
 use Illuminate\Http\Request;
 
 class ElectronicLibraryController extends Controller
@@ -13,7 +14,8 @@ class ElectronicLibraryController extends Controller
      */
     public function index()
     {
-        //
+        $library = ElectronicLibrary::where('id','desc')->get();
+        return view('admin.electroniclibrary.index',compact('library'));
     }
 
     /**

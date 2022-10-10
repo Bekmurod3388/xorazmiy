@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('electronic_libraries', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('img');
+            $table->text('description');
             $table->timestamps();
         });
     }
