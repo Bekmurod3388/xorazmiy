@@ -56,6 +56,12 @@
                         <p>Xabarlar</p>
                     </a>
                 </li>
+                <li class="nav-item {{  request()->routeIs('admin.circle.index') ? 'active' : '' }}">
+                    <a href="{{route('admin.circle.index')}}">
+                        <i class="fas fa-user"></i>
+                        <p>To'garaklar</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
