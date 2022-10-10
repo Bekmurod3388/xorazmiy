@@ -61,18 +61,19 @@
                                 </div> <!-- singel dashboard -->
                                 <div class="singel-dashboard pt-40">
                                     <h5>Kasbiy faoliyati</h5>
-                                   <p><p>1993-1998 yy. – Toshkent davlat universiteti talabasi <br>
-                                        1998-2008 yy. – Shovot tuman 37-umumiy o'rta ta'lim maktabida fizika fani o'qituvchisi
+                                   <p><p>1993 - 1998yy. – Toshkent davlat universiteti talabasi <br>
+                                        1998 - 2008yy. – Shovot tuman 37-umumiy o'rta ta'lim maktabida fizika fani o'qituvchisi
                                         <br>
-                                        2008-2011 yy. - Shovot tuman 37-umumiy o'rta ta'lim maktabi direktori <br>
-                                        2011-2016 yy. – Toshkent axborot texnologiyalari universiteti Urganch filiali qoshidagi 1-son akademik litsey “Aniq fanlar” yo'nalishi bo'lim boshlig'i
+                                        2008 - 2011yy. - Shovot tuman 37-umumiy o'rta ta'lim maktabi direktori <br>
+                                        2011 - 2016yy. – Toshkent axborot texnologiyalari universiteti Urganch filiali qoshidagi 1-son akademik litsey “Aniq fanlar” yo'nalishi bo'lim boshlig'i
                                         <br>
-                                        2016- 2017yy.  - Shovot tuman 36-umumiy o'rta ta'lim maktabi direktori <br>
-                                        2017-2021yy   – Ayrim fanlar chuqur o'rganiladigan 1-ixtisoslashtirilgan maktab-internati
+                                        2016 - 2017yy.  - Shovot tuman 36-umumiy o'rta ta'lim maktabi direktori <br>
+                                        2017 - 2021yy.   – Ayrim fanlar chuqur o'rganiladigan 1-ixtisoslashtirilgan maktab-internati
 
                                         direktori    <br>
-                                        2021 y. h.v      – Xorazm viloyati Shovot tumani  Al-Xorazmiy nomidagi Xalqaro fizika
+                                        2021 - 2022yy.      – Xorazm viloyati Shovot tumani  Al-Xorazmiy nomidagi Xalqaro fizika
                                         va matematika  maktab-internat direktori <br>
+                                        2022 y.- h.v. - Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati direktori
                                     </p></p>
                                 </div> <!-- singel dashboard -->
                                 <div class="singel-dashboard pt-40">
