@@ -54,6 +54,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('active', App\Http\Controllers\ActiveController::class);
     Route::resource('messages', App\Http\Controllers\MessageController::class);
     Route::resource('circle',\App\Http\Controllers\CircleController::class);
+    Route::resource('parent',\App\Http\Controllers\OtaController::class);
 
 
 
