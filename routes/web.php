@@ -55,7 +55,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('messages', App\Http\Controllers\MessageController::class);
     Route::resource('circle',\App\Http\Controllers\CircleController::class);
     Route::resource('parent',\App\Http\Controllers\OtaController::class);
-
+    Route::resource('electroniclibrary',\App\Http\Controllers\ElectronicLibraryController::class);
 
 
 
