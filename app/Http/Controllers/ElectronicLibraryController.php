@@ -89,7 +89,7 @@ class ElectronicLibraryController extends Controller
         $request->validate([
             'title'=>'required',
             'description'=>'required',
-            'file'=>''
+            'file'=>'file|mimes:pdf,docs,docx|max:10000'
         ]);
         if ($request->hasFile('file')) {
             $uuid = Str::uuid()->toString();
