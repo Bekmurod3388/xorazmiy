@@ -71,9 +71,9 @@ class ElectronicLibraryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ElectronicLibrary $library)
+    public function edit($id)
     {
-//        dd($library);
+        $library=ElectronicLibrary::find($id);
         return view('admin.electroniclibrary.edit',['library'=>$library]);
     }
 
@@ -117,7 +117,6 @@ class ElectronicLibraryController extends Controller
      */
     public function destroy( $id)
     {
-//        dd($library);
         $library = ElectronicLibrary::find($id);
         $library->delete();
         return redirect()->route('admin.electroniclibrary.index')->with('success','Kitob muvaffaqiyatli o\'chirildi');
