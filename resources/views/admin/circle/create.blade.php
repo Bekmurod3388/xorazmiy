@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label for="description">O'qituvchi</label>
-                            <input type="text" class="form-control" name="teacher" id="description" placeholder="O'qituvchi nomi">
+                            <input type="text" class="form-control" name="teacher" id="description" placeholder="O'qituvchi f.i.o">
                         </div>
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
