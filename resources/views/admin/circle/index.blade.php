@@ -23,7 +23,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Nomi</th>
                             <th scope="col">Tekst</th>
-                            <th scope="col">Ustozi</th>
+                            <th scope="col">O'qituvchi</th>
                             <th scope="col">Rasm</th>
                             <th scope="col">Ko'rilgan</th>
                             <th scope="col">Amallar</th>
