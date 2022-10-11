@@ -36,6 +36,10 @@
                             <label for="img">O'qituvchi</label>
                             <input type="text" name="teacher" class="form-control" value="{{$circle->teacher}}">
                         </div>
+                        <div class="form-group">
+                            <label for="img">Rasm qo'shish</label>
+                            <input type="file" name="img" class="form-control" id="img">
+                        </div>
                         <button type="submit" class="btn btn-primary">Saqlash</button>
                         <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>

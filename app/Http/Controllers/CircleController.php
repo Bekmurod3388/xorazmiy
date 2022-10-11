@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Circle;
+use App\Models\ElectronicLibrary;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -38,17 +39,21 @@ class CircleController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
         $request->validate([
             'name' => 'required',
-            'desc' => 'required',
+            'description' => 'required',
             'teacher'=>'required',
+            'img'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
         ]);
-        $circle = new Circle();
-        $circle->name = $request->name;
-        $circle->description = $request->desc;
-        $circle->teacher = $request->teacher;
-        $circle->save();
+        $uuid = Str::uuid()->toString();
+        $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
+        $request->img->move(public_path('../public/images'), $fileName);
+        Circle::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'teacher'=>$request->teacher,
+            'img' => $fileName,
+        ]);
         return redirect()->route('admin.circle.index')->with('success', 'To\'garak muvaffaqiyatli qo\'shildi.');
     }
 
@@ -87,12 +92,21 @@ class CircleController extends Controller
             'name'=>'required',
             'description'=>'required',
             'teacher'=>'required',
+            'img'=>'image|mimes:jpeg,png,jpg,gif,svg|max:10000'
         ]);
-        $circle->update([
-            'name'=>$request->name,
-            'descrition'=>$request->description,
-            'teacher'=>$request->teacher,
-        ]);
+        if ($request->hasFile('file')) {
+            $uuid = Str::uuid()->toString();
+            $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
+            $request->img->move(public_path('../public/images'), $fileName);
+            $circle->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'img' => $fileName,
+            ]);
+        } else {
+            $circle->update($request->all());
+        }
+
         return redirect()->route('admin.circle.index')
             ->with('success', 'To\'garak muvaffaqiyatli tahrirlandi!');
     }

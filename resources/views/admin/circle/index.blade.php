@@ -24,6 +24,7 @@
                             <th scope="col">Nomi</th>
                             <th scope="col">Tekst</th>
                             <th scope="col">Ustozi</th>
+                            <th scope="col">Rasm</th>
                             <th scope="col">Ko'rilgan</th>
                             <th scope="col">Amallar</th>
                         </tr>
@@ -35,6 +36,7 @@
                                 <td>{{$circle->name}}</td>
                                 <td>{{$circle->description}}</td>
                                 <td>{{$circle->teacher}}</td>
+                                <td><img src="{{asset('/images/' . $circle->img)}}" width="100px" alt="Rasm"></td>
                                 <td>{{$circle->viewed}}</td>
                                 <td class="col-2">
                                     <form action="{{ route('admin.circle.destroy',$circle->id) }}" method="POST">

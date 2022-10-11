@@ -30,11 +30,15 @@
                         </div>
                         <div class="form-group">
                             <label for="header">Tekst</label>
-                            <textarea rows="5" cols="10" name="desc" class="form-control" placeholder="Tekst"></textarea>
+                            <textarea rows="5" cols="10" name="description" class="form-control" placeholder="Tekst"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="description">O'qituvchi</label>
                             <input type="text" class="form-control" name="teacher" id="description" placeholder="O'qituvchi nomi">
+                        </div>
+                        <div class="form-group">
+                            <label for="img">Rasm qo'shish</label>
+                            <input type="file" name="img" class="form-control" id="img">
                         </div>
                         <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
                         <input type="reset" class="btn btn-danger" value="Tozalash">

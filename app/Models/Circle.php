@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Circle extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','description','teacher','viewed'];
+    protected $fillable = ['name','description','teacher','viewed','img'];
 }
