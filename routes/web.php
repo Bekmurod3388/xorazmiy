@@ -33,7 +33,6 @@ Route::get('/olimpian/{olimpic}', [App\Http\Controllers\OlimpicController::class
 Route::get('/actives', [App\Http\Controllers\ActiveController::class, 'actives'])->name('actives');
 Route::get('/active/{active}', [App\Http\Controllers\ActiveController::class, 'show'])->name('active');
 Route::post('/contact', [\App\Http\Controllers\MessageController::class, 'store'])->name('messages.store');
-Route::get('parents',[\App\Http\Controllers\OnaController::class,'index'])->name('parents');
 Auth::routes([
     'confirm' => false,
     'login' => true,

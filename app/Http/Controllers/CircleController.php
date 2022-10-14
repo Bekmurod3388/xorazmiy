@@ -122,4 +122,9 @@ class CircleController extends Controller
         $circle->delete();
         return redirect()->route('admin.circle.index')->with('success', 'To\'garak o\'chirildi!');
     }
+
+    public function circle(){
+        $circle = Circle::orderBy('id','desc')->get();
+        return view('circle',compact('circle'));
+    }
 }
