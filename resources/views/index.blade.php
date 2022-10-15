@@ -315,7 +315,7 @@
 
     <div class="container">
         <div class="container d-flex mt-5" style="padding-left: 0;padding-right: 0">
-            <a class="card text-bg-black mr-3" href=""
+            <a class="card text-bg-black mr-3" href="{{route('circle')}}"
                style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-1.jpg')}})">
                 <p class="bg-dark pt-5 m-4 text-white text-center" style="opacity: 65%; height: 100%;width: 87%">
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="82.584" height="86.709"

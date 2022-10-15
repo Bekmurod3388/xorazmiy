@@ -26,6 +26,7 @@ Route::view('/spirituality','spirit')->name('spirit');
 Route::view('/train','train')->name('train');
 Route::view('/special','special')->name('special');
 Route::view('/contact','contact')->name('contact');
+Route::get('/circle',[\App\Http\Controllers\CircleController::class, 'circle'])->name('circle');
 Route::get('/teachers', [App\Http\Controllers\TeacherController::class, 'teachers'])->name('teachers');
 Route::get('/teacher/{teacher}', [App\Http\Controllers\TeacherController::class, 'show'])->name('teacher');
 Route::get('/olimpians', [App\Http\Controllers\OlimpicController::class, 'olimpic'])->name('olimpics');
