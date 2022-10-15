@@ -228,13 +228,15 @@
                         </g>
                     </svg>
 
-                    <br><br><span style="font-size: 25px;">To'garaklar</span></p>
+                    <br><br><span style="font-size: 25px;">Ovqatlanish vaqtlari <br>
+                                5 mahal avqatlanish, bepul</span></p>
             </div>
             <div class="card text-bg-black mr-3"
                  style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-1.jpg')}})">
                 <p class="bg-dark pt-5 m-4 text-white text-center" style="opacity: 65%; height: 100%;width: 87%">
 
-                    <br><br><span style="font-size: 25px;">To'garaklar</span></p>
+                    <br><br><span style="font-size: 25px;">Maktab formasi <br>
+                    Bor, Bepul</span></p>
             </div>
             <div class="card text-bg-black mr-3" href=""
                  style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-2.jpg')}})">
@@ -287,7 +289,8 @@
                         </g>
                     </svg>
 
-                    <br><br><span style="font-size: 25px;">To'garaklar</span></p>
+                    <br><br><span style="font-size: 25px;">Maktab yotoqxonasi <br>
+                    Bor, Bepul</span></p>
             </div>
             {{--            <a class="card text-bg-black mr-3" href="" style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-2.jpg')}})">--}}
             {{--                <p class="bg-dark pt-5 m-4 text-white text-center" style="opacity: 65%; height: 100%;width: 87%">--}}
@@ -313,7 +316,7 @@
     <div class="container">
         <div class="container d-flex mt-5" style="padding-left: 0;padding-right: 0">
             <a class="card text-bg-black mr-3" href=""
-               style="height: 300px;width: 33%; background-image: url({{asset('assets/img/fonts/as.jpg')}})">
+               style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-1.jpg')}})">
                 <p class="bg-dark pt-5 m-4 text-white text-center" style="opacity: 65%; height: 100%;width: 87%">
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="82.584" height="86.709"
                          viewBox="0 0 82.584 86.709">
@@ -386,7 +389,7 @@
                         </g>
                     </svg>
 
-                    <br><br><span style="font-size: 25px;">To'garaklar</span></p>
+                    <br><br><span style="font-size: 25px;">Ota-onalarga</span></p>
             </a>
             <a class="card text-bg-black mr-3" href=""
                style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-3.jpg')}})">
@@ -402,7 +405,7 @@
                                   fill="#fff"></path>
                         </g>
                     </svg>
-                    <br><br><span style="font-size: 25px;">To'garaklar</span></p>
+                    <br><br><span style="font-size: 25px;">Elektron kutubxona</span></p>
             </a>
         </div>
     </div>
