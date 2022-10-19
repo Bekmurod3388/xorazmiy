@@ -20,22 +20,45 @@
 
     <!--====== PAGE BANNER PART ENDS ======-->
 
-    @foreach($circle as $new)
-    <div class="container mb-5 d-flex" style="margin-top: 130px">
 
-        <div class="container" >
-            <img src="{{asset('/images/'.$new->img)}}">
-        </div>
-        <div class="container p-2">
-            <h2 class="mb-3">
-                {{$new->name}} to'garak
-            </h2>
-            <p class="mb-5">{{$new->description}}</p>
-            <h6>To'garak o'qituvchisi: {{$new->teacher}}</h6>
-        </div>
+        <section id="teachers-singel" class="pt-70 pb-120 gray-bg">
+            <div class="container">
+                @foreach($circle as $new)
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-8">
+                        <div class="teachers-left mt-50">
+                            <div class="hero">
+                                <img style="height: 300px;width: 400px" src="{{asset('/images/'.$new->img)}}" alt="rasm">
+                            </div>
+                        </div> <!-- teachers left -->
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="teachers-right mt-50">
 
-    </div>
-    @endforeach
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                    <div class="dashboard-cont">
+                                        <div class="singel-dashboard pt-40">
+
+                                            <h2 class="mb-3">
+                                                {{$new->name}} to'garak
+                                            </h2>
+                                            <p class="mb-5">{{$new->description}}</p>
+                                            <h6>To'garak o'qituvchisi: {{$new->teacher}}</h6>
+                                        </div> <!-- singel dashboard -->
+                                    </div> <!-- dashboard cont -->
+                                </div>
+
+                            </div>
+                        </div> <!-- tab content -->
+                    </div> <!-- teachers right -->
+                </div>
+                @endforeach
+            </div> <!-- row -->
+             <!-- container -->
+        </section>
+
+
     <x-layouts.footer></x-layouts.footer>
 
 @endsection
