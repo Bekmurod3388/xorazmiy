@@ -36,7 +36,7 @@
                                 <td>{{$circle->name}}</td>
                                 <td>{{$circle->description}}</td>
                                 <td>{{$circle->teacher}}</td>
-                                <td><img src="{{asset('/images/' . $circle->img)}}" width="100px" alt="Rasm"></td>
+                                <td><img src="{{asset('/images/' . $circle->img)}}"   alt="Rasm" style="width:100%;height: 300%"></td>
                                 <td>{{$circle->viewed}}</td>
                                 <td class="col-2">
                                     <form action="{{ route('admin.circle.destroy',$circle->id) }}" method="POST">
