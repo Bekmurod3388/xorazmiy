@@ -122,4 +122,14 @@ class ElectronicLibraryController extends Controller
         $library->delete();
         return redirect()->route('admin.electroniclibrary.index')->with('success','Kitob muvaffaqiyatli o\'chirildi');
     }
+
+    public function library(){
+        $library = ElectronicLibrary::orderBy('id','desc')->get();
+        return view('electroniclibrary',['library'=>$library]);
+    }
+
+//    public function download($n){
+//        $file = public_path()."/books/".$n;
+//        return response()->download($file);
+//    }
 }
