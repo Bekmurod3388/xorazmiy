@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">Ota-Ona qo'shish<h1></div>
+                    <div class="col-10"><h1 class="card-title">Ota-Onalarga eslatma qo'shish<h1></div>
                 </div>
                 <hr>
                 <div class="card-body">
@@ -25,17 +25,14 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="header">Ismi</label>
-                            <input type="text" name="name" class="form-control" id="header" placeholder="Ismi ">
+                            <label for="header">Sarlavha</label>
+                            <input type="text" name="title" class="form-control" id="header" placeholder="Sarlavha ">
                         </div>
                         <div class="form-group">
-                            <label for="surname">Familyasi</label>
-                            <input type="text" name="surname" class="form-control" id="surname" placeholder="Familiya ">
+                            <label for="surname">Matni</label>
+                            <textarea name="text" class="form-control" id="surname" placeholder="matn kiriting "></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="description">Telefon number</label>
-                            <input type="text" class="form-control" name="tel" id="description" placeholder="Telfon">
-                        </div>
+
                         <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
                         <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>

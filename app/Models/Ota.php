@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Ota extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','surname','phone'];
+    protected $fillable = ['title','text'];
 }
