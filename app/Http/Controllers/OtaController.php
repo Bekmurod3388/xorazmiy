@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ota;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class OtaController extends Controller
 {
@@ -37,14 +39,14 @@ class OtaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'surname' => 'required',
-            'tel'=>'required',
+            'title' => 'required',
+            'text' => 'required',
+
         ]);
         $ota = new Ota();
-        $ota->name = $request->name;
-        $ota->surname = $request->surname;
-        $ota->phone = $request->tel;
+        $ota->title= $request->title;
+        $ota->text = $request->text;
+
         $ota->save();
         return redirect()->route('admin.parent.index')->with('success', 'bajarildi');
     }
@@ -77,20 +79,20 @@ class OtaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Ota $parent)
-    {
-        $request->validate([
-            'name'=>'required',
-            'surname'=>'required',
-            'tel'=>'required',
+    public function update(Request $request,Ota $parent) {
+
+        $data = $request->validate([
+            'title' => 'required',
+            'text' => 'required',
+
+
         ]);
-        $parent->update([
-            'name'=>$request->name,
-            'surname'=>$request->surname,
-            'phone'=>$request->tel,
-        ]);
+
+
+
+        $parent->update($data);
         return redirect()->route('admin.parent.index')
-            ->with('success', ' Muvaffaqiyatli tahrirlandi!');
+            ->with('success', 'Muvaffaqiyatli yangilandi');
     }
 
     /**

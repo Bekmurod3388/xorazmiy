@@ -25,17 +25,13 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="header">Ismi</label>
-                            <input type="text" name="name" class="form-control" placeholder="Ismi" value="{{$parent->name}}">
+                            <label for="header">Sarlavha</label>
+                            <input type="text" name="title" class="form-control" placeholder="Sarlavha" value="{{$parent->title}}">
                         </div>
                         <div class="form-group">
-                            <label for="header">Familya</label>
-                            <input type="text" name="surname" class="form-control" placeholder="Familya" value="{{$parent->surname}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="img">O'qituvchi</label>
-                            <input type="text" name="tel" class="form-control" value="{{$parent->phone}}">
-                        </div>
+                            <label for="header">Text</label>
+                            <textarea name="text" class="form-control" id="surname" placeholder="matn kiriting "></textarea>                        </div>
+
                         <button type="submit" class="btn btn-primary">Saqlash</button>
                         <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
