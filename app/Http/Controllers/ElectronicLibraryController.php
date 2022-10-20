@@ -127,9 +127,13 @@ class ElectronicLibraryController extends Controller
         $library = ElectronicLibrary::orderBy('id','desc')->get();
         return view('electroniclibrary',['library'=>$library]);
     }
-
-//    public function download($n){
-//        $file = public_path()."/books/".$n;
-//        return response()->download($file);
-//    }
+    public function electronic(){
+        $library = ElectronicLibrary::orderBy('id','desc')->get();
+        return view('electroniclibrary',compact('library'));
+    }
+    public function download($n){
+        dd($n);
+        $file = public_path("/books/$n");
+        return response()->download($file);
+    }
 }

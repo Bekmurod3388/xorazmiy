@@ -35,6 +35,8 @@ Route::get('/actives', [App\Http\Controllers\ActiveController::class, 'actives']
 Route::get('/active/{active}', [App\Http\Controllers\ActiveController::class, 'show'])->name('active');
 Route::post('/contact', [\App\Http\Controllers\MessageController::class, 'store'])->name('messages.store');
 Route::get('/for_parents',[\App\Http\Controllers\OnaController::class,'index'])->name('ota');
+Route::get('/library',[\App\Http\Controllers\ElectronicLibraryController::class,'electronic'])->name('electronic');
+Route::get('/download',[\App\Http\Controllers\ElectronicLibraryController::class,'download'])->name('download');
 Auth::routes([
     'confirm' => false,
     'login' => true,
