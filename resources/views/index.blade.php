@@ -327,7 +327,7 @@
 
                     <br><br><span style="font-size: 25px;">Ota-onalarga</span></p>
             </a>
-            <a class="card text-bg-black mr-3" href="{{route('electronic')}}"
+            <a class="card text-bg-black mr-3" href=""
                style="height: 300px;width: 33%; background-image: url({{asset('assets/img/parents/l-3.jpg')}})">
                 <p class="bg-dark pt-5 m-4 text-white text-center" style="opacity: 65%; height: 100%;width: 87%">
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="77.677" height="86"
