@@ -23,6 +23,7 @@ Route::view('/about','about')->name('about');
 Route::view('/director','director')->name('director');
 Route::view('/spirituality','spirit')->name('spirit');
 Route::view('/train','train')->name('train');
+Route::view('/chqbt','chqbt')->name('chqbt');
 Route::view('/special','special')->name('special');
 Route::view('/contact','contact')->name('contact');
 Route::get('/circle',[\App\Http\Controllers\CircleController::class, 'circle'])->name('circle');

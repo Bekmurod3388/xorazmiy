@@ -148,6 +148,7 @@
                                         <li><a class="nav-item {{  request()->routeIs('train') ? 'active' : '' }}" href="{{route('train')}}">O'quv ishlari bo'yicha direktor o'rinbosari</a></li>
                                         <li><a class="nav-item {{  request()->routeIs('spirit') ? 'active' : '' }}" href="{{route('spirit')}}">Ma'naviy va ma'rifiy ishlar bo'yicha direktor o'rinbosari</a></li>
                                         <li><a class="nav-item{{  request()->routeIs('special') ? 'active' : '' }}" href="{{route('special')}}">Ixtisoslashgan fanlar bo'yicha direktor o'rinbosari</a></li>
+                                        <li><a class="nav-item{{  request()->routeIs('chqbt') ? 'active' : '' }}" href="{{route('chqbt')}}">CHQBT bo'yicha direktor o'rinbosari</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
