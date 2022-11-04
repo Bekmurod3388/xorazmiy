@@ -28,10 +28,10 @@
                 <div class="col-lg-4 col-md-8">
                     <div class="teachers-left mt-50">
                         <div class="hero">
-                            <img src="{{asset('fasset/train.png')}}" alt="Direktor">
+                            <img src="{{asset('fasset/train2.jpg')}}" alt="Direktor">
                         </div>
                         <div class="name">
-                            <h6>Matyoqubova Gulshoda</h6>
+                            <h6>Navruzov Faxriddin</h6>
 
                         </div>
                         <div class="social">
@@ -57,17 +57,17 @@
                                 <div class="dashboard-cont">
                                     <div class="singel-dashboard pt-40">
                                         <h5>Ma'lumotnoma</h5>
-                                        <p>1980 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 2002-yilda Urganch davlat universitetini tugatgan.</p>
+                                        <p>1977 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 1999-yilda Toshkent davlat universitetini tugatgan.</p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Kasbiy faoliyati</h5>
                                         <p>
-                                            1997-2002 yy. -  Urganch davlat  universiteti talabasi <br>
-                                            1998-2001 yy. -  Al-Xorazmiy IMI o'qituvchi <br>
-                                            2001-2012 yy. -  28-umumta'lim maktabida o'qituvchi
+                                            1994-1999 yy. -  Toshkent davlat  universiteti talabasi <br>
+                                            1999-2001 yy. -  Xorazm viloyati Shovot tumani 27-maktabda o'qituvchi <br>
+                                            2001-2003 yy. -  Xorazm viloyati Shovot tumani maishiy xizmat KHK da o'qituvchi
                                             <br>
-                                            2012-2013 yy. -  Shovot tumani XTMFMTTE bo'limi Tashxis Markazi rahbari <br>
-                                            2013-2022 yy. -  28-umumta'lim maktabida  O'IB direktor o'rinbosari
+                                            2003-2021 yy. - Xorazm viloyati Shovot tumani 1-IMI da Tarix fani o'qituvchisi <br>
+                                            2021-2022 yy. - Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab internatida Tarix fani o'qituvchisi
                                             <br>
                                             2022 y. h.v   -  Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan
                                             maktab-internatida o'quv ishlari bo'yicha direktor  o'rinbosari
