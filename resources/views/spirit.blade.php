@@ -70,7 +70,7 @@
                                             2021-2022 yy. - Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab internatida Tarix fani o'qituvchisi
                                             <br>
                                             2022 y. h.v   -  Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan
-                                            maktab-internatida o'quv ishlari bo'yicha direktor  o'rinbosari
+                                            maktab-internatida ma'naviy va ma'rifiy ishlar bo'yicha direktor  o'rinbosari
                                         </p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
