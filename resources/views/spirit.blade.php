@@ -75,7 +75,7 @@
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Bog'lanish uchun:</h5>
-                                        <p><i class="fa fa-phone"></i>Tel: +998-90-957-98-48<b></b></p>
+                                        <p><i class="fa fa-phone"></i>Tel:<b></b></p>
                                         <p><i class = "fa fa-envelope"></i> E-pochta: </p>
                                         <p>Qabul kunlari: Dushanba - Juma soat 10<sup>00</sup> dan 12<sup>00</sup> gacha</p>
                                     </div> <!-- singel dashboard -->
