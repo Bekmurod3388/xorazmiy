@@ -420,7 +420,9 @@
                     <div class="col">
                         <div class="singel-news mt-30">
                             <div class="news-thum pb-25">
-                                <img src="{{asset('/storage/posts/' . $new->img)}}" alt="News">
+                                <img style="width: 100%; height: 208px; object-fit: cover;" src="{{asset('/storage/posts/' . $new->img)}}" alt="News">
+
+
                             </div>
                             <div class="news-cont">
                                 <ul>
@@ -428,7 +430,7 @@
                                         </a></li>
                                 </ul>
                                 <a href="{{route('news-item' , $new->id)}}"><h3>{{$new->header}}</h3></a>
-                                <p>{{ \Illuminate\Support\Str::limit($new->description, 250, '...') }}</p>
+                                <p style="text-align: justify; text-justify: inter-word;">{{ \Illuminate\Support\Str::limit($new->description, 150, '...') }}</p>
                             </div>
                         </div> <!-- singel news -->
                     </div>
