@@ -349,55 +349,55 @@
     <!--====== CATEGORY PART ENDS ======-->
     <!--====== ABOUT PART START ======-->
 
-    <section id="about-part" class="pt-65">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="section-title mt-50">
-                        <h5>Biz haqimizda</h5>
-                        <h2>Maktab ramzlari</h2>
-                    </div> <!-- section title -->
-                    <div class="about-cont">
-                        <p>Maktab fizika va matematika sohasida kadrlar tayyorlash bo‘yicha milliy
-                            va xalqaro maydonda imidjini oshirish maqsadida o‘zining ramzlari, shu jumladan madhiyasi,
-                            bayrog‘i va emblemasiga ega.
-                        </p><br>
-                        <h2>Maktab madhiyasi</h2>
-                        <p>Kuch olamiz maktab ilmidan<br>
-                            Vatan, bizning shahdimizga boq...<br>
-                            Fizik qonun, hisob bilmidan <br>
-                            Olayapmiz mukammal saboq... <br><br>
+{{--    <section id="about-part" class="pt-65">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-5">--}}
+{{--                    <div class="section-title mt-50">--}}
+{{--                        <h5>Biz haqimizda</h5>--}}
+{{--                        <h2>Maktab ramzlari</h2>--}}
+{{--                    </div> <!-- section title -->--}}
+{{--                    <div class="about-cont">--}}
+{{--                        <p>Maktab fizika va matematika sohasida kadrlar tayyorlash bo‘yicha milliy--}}
+{{--                            va xalqaro maydonda imidjini oshirish maqsadida o‘zining ramzlari, shu jumladan madhiyasi,--}}
+{{--                            bayrog‘i va emblemasiga ega.--}}
+{{--                        </p><br>--}}
+{{--                        <h2>Maktab madhiyasi</h2>--}}
+{{--                        <p>Kuch olamiz maktab ilmidan<br>--}}
+{{--                            Vatan, bizning shahdimizga boq...<br>--}}
+{{--                            Fizik qonun, hisob bilmidan <br>--}}
+{{--                            Olayapmiz mukammal saboq... <br><br>--}}
 
-                            Kel, tengdoshim, safimizda tur <br>
-                            Zamon ko‘rsin ilm-fan kuchin. <br>
-                            Egallaymiz dunyo sirlarin <br>
-                            Ona yurtning ertasi uchun... <br><br>
+{{--                            Kel, tengdoshim, safimizda tur <br>--}}
+{{--                            Zamon ko‘rsin ilm-fan kuchin. <br>--}}
+{{--                            Egallaymiz dunyo sirlarin <br>--}}
+{{--                            Ona yurtning ertasi uchun... <br><br>--}}
 
-                            Bobom qo‘li yetgandi ko‘kka - <br>
-                            Bugun dunyo qilgaydir ta’zim. <br>
-                            Fizika ham matematika, <br>
-                            Al-Jabrning yurti - Xorazm! <br>
-                        </p>
-                    </div>
-                </div> <!-- about cont -->
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="about-event mt-50">
-                        <div class="event-title">
-                            <h3>Maktab emblemasi</h3>
-                        </div> <!-- event title -->
-                        <img src="{{asset('fasset/images/emblem.png')}}" alt="Emblema"><br>
-                        <div class="event-title">
-                            <h3>Maktab bayrog'i</h3>
-                        </div> <!-- event title -->
-                        <img src="{{asset('fasset/images/flag.png')}}" alt="Bayroq">
-                    </div> <!-- about event -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="about-bg">
-            <img src="{{asset('fasset/images/about/bg-1.png')}}" alt="About">
-        </div>
-    </section>
+{{--                            Bobom qo‘li yetgandi ko‘kka - <br>--}}
+{{--                            Bugun dunyo qilgaydir ta’zim. <br>--}}
+{{--                            Fizika ham matematika, <br>--}}
+{{--                            Al-Jabrning yurti - Xorazm! <br>--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div> <!-- about cont -->--}}
+{{--                <div class="col-lg-6 offset-lg-1">--}}
+{{--                    <div class="about-event mt-50">--}}
+{{--                        <div class="event-title">--}}
+{{--                            <h3>Maktab emblemasi</h3>--}}
+{{--                        </div> <!-- event title -->--}}
+{{--                        <img src="{{asset('fasset/images/emblem.png')}}" alt="Emblema"><br>--}}
+{{--                        <div class="event-title">--}}
+{{--                            <h3>Maktab bayrog'i</h3>--}}
+{{--                        </div> <!-- event title -->--}}
+{{--                        <img src="{{asset('fasset/images/flag.png')}}" alt="Bayroq">--}}
+{{--                    </div> <!-- about event -->--}}
+{{--                </div>--}}
+{{--            </div> <!-- row -->--}}
+{{--        </div> <!-- container -->--}}
+{{--        <div class="about-bg">--}}
+{{--            <img src="{{asset('fasset/images/about/bg-1.png')}}" alt="About">--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <!--====== ABOUT PART ENDS ======-->
 
