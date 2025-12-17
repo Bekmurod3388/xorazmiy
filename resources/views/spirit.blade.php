@@ -28,10 +28,10 @@
                 <div class="col-lg-4 col-md-8">
                     <div class="teachers-left mt-50">
                         <div class="hero">
-                            <img src="{{asset('fasset/train2.jpg')}}" alt="Direktor">
+                            <img src="{{asset('fasset/dilshod.jpg')}}" alt="Direktor">
                         </div>
                         <div class="name">
-                            <h6>Navruzov Faxriddin</h6>
+                            <h6>Matyaqubov Dilshod</h6>
 
                         </div>
                         <div class="social">
@@ -57,25 +57,27 @@
                                 <div class="dashboard-cont">
                                     <div class="singel-dashboard pt-40">
                                         <h5>Ma'lumotnoma</h5>
-                                        <p>1977 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 1999-yilda Toshkent davlat universitetini tugatgan.</p>
+                                        <p>1985 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 2006-yilda A.Qodiriy nomidagi Jizzax davlat pedagogika institutini tugatgan.</p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Kasbiy faoliyati</h5>
-                                        <p>
-                                            1994-1999 yy. -  Toshkent davlat  universiteti talabasi <br>
-                                            1999-2001 yy. -  Xorazm viloyati Shovot tumani 27-maktabda o'qituvchi <br>
-                                            2001-2003 yy. -  Xorazm viloyati Shovot tumani maishiy xizmat KHK da o'qituvchi
-                                            <br>
-                                            2003-2021 yy. - Xorazm viloyati Shovot tumani 1-IMI da Tarix fani o'qituvchisi <br>
-                                            2021-2022 yy. - Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi xalqaro fizika va matematika maktab internatida Tarix fani o'qituvchisi
-                                            <br>
-                                            2022 y. h.v   -  Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan
-                                            maktab-internatida ma'naviy va ma'rifiy ishlar bo'yicha direktor  o'rinbosari
-                                        </p>
+                                    <p>
+                                        2002-2006 yy	-	 Jizzax davlat pedagogika instituti talabasi <br>
+                                        2006-2007 yy	-	Jizzax Dustlik qishloq xo'jalik kasb-hunar kollejida o'qituvchi
+                                        <br>
+                                        2007-2008 yy	-	Xarbiy xizmatda <br>
+                                        2008-2019 yy    -  	Xorazm viloyat Shovot tumani 1-IMI da jismoniy tarbiya fani o'qituvchisi
+                                        <br>
+
+                                        2019-2021 yy   -    Xorazm viloyat Shovot tumani 1-IMI da ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
+                                        <br>
+                                        2021 yil martidan  -  Xorazm viloyati Shovot tumani Al-xorazmiy nomidagi Xalqaro fizika va matematika maktab-internatida ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari
+                                        <br>
+                                    </p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Bog'lanish uchun:</h5>
-                                        <p><i class="fa fa-phone"></i>Tel:  +998-90-431-82-38<b></b></p>
+                                        <p><i class="fa fa-phone"></i>Tel: <b>+998914298748</b> </p>
                                         <p><i class = "fa fa-envelope"></i> E-pochta: </p>
                                         <p>Qabul kunlari: Dushanba - Juma soat 10<sup>00</sup> dan 12<sup>00</sup> gacha</p>
                                     </div> <!-- singel dashboard -->
