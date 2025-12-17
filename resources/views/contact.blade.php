@@ -3,7 +3,7 @@
 @section('content')
 
     <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8"
-             style="background-image: url({{ asset('/fasset/images/slide1.jpg') }});">
+             style="background-image: url({{ asset('texnikum_img/aa.png')  }});">
         <div class="container">
             <div class="row">
                 <div class="col-12">
