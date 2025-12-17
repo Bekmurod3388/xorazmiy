@@ -315,17 +315,20 @@
                             <div class="news-img-wrapper">
                                 <img src="{{ asset('/storage/posts/' . $new->img) }}" alt="News Image">
                                 <span class="date-badge">
-                                    <i class="fa fa-calendar mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
-                                </span>
+                    <i class="fa fa-calendar mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
+                </span>
                             </div>
+
                             <div class="news-body">
-                                <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'id' => $new->id]) }}" class="news-title">
+                                <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}" class="news-title">
                                     {{ \Illuminate\Support\Str::limit($new->header, 50) }}
                                 </a>
+
                                 <p class="text-muted small mb-3">
                                     {{ \Illuminate\Support\Str::limit($new->description, 100, '...') }}
                                 </p>
-                                <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'id' => $new->id]) }}"
+
+                                <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}"
                                    class="text-primary font-weight-bold" style="font-size: 14px;">
                                     {{ __('home.news.read_more') }} <i class="fa fa-angle-right ml-1"></i>
                                 </a>
@@ -333,6 +336,7 @@
                         </div>
                     </div>
                 @endforeach
+
             </div>
 
         </div>
