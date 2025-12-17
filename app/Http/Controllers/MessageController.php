@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class MessageController extends Controller
 {
@@ -34,18 +36,20 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request):JsonResponse
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'subject'=>'required',
-            'message'=>'required',
+        $validated = $request->validate([
+            'name' => ['required','string','max:255'],
+            'phone' => ['required','string','max:50'],
+            'message' => ['required','string','max:5000'],
         ]);
 
-        Message::create($request->all());
-        return response()->json(['success'=>'Form is successfully submitted!']);
+        Message::create($validated);
+
+        return response()->json([
+            'status' => 'ok',
+            'message' => __('contact.alert.success'),
+        ]);
     }
 
     /**
