@@ -26,13 +26,31 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="header">Ismi Sharifi</label>
-                            <input type="text" name="name" class="form-control" id="header" placeholder="FIO">
+                            <label>Ismi Sharifi (UZ)</label>
+                            <input type="text" name="name_uz" class="form-control" placeholder="FIO (UZ)">
                         </div>
                         <div class="form-group">
-                            <label for="description">Faol haqida batafsil</label>
-                            <textarea class="form-control" name="desc" id="description" rows="10"></textarea>
+                            <label>ФИО (RU)</label>
+                            <input type="text" name="name_ru" class="form-control" placeholder="ФИО (RU)">
                         </div>
+                        <div class="form-group">
+                            <label>Full name (EN)</label>
+                            <input type="text" name="name_en" class="form-control" placeholder="Full name (EN)">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Faol haqida batafsil (UZ)</label>
+                            <textarea class="form-control" name="desc_uz" rows="8"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Подробно (RU)</label>
+                            <textarea class="form-control" name="desc_ru" rows="8"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Details (EN)</label>
+                            <textarea class="form-control" name="desc_en" rows="8"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
                             <input type="file" name="img" class="form-control" id="img">

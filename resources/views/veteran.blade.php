@@ -5,7 +5,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Maktabning faxriy o'qituvchisi: {{$veteran->name}}</h2>
+                        <h2>{{ __('veterans.single_title', ['name' => $veteran->name]) }}</h2>
+
 
                     </div> <!-- page banner cont -->
                 </div>
@@ -30,9 +31,8 @@
 
                         </div>
                         <div class="description">
-                            <p>
 
-                            </p>
+
                         </div>
                     </div> <!-- teachers left -->
                 </div>

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Maktabning faol o'quvchisi: {{$active->name}}</h2>
+                        <h2>{{ __('actives.single_title', ['name' => $active->name]) }}</h2>
 
                     </div> <!-- page banner cont -->
                 </div>
@@ -23,7 +23,7 @@
                 <div class="col-lg-4 col-md-8">
                     <div class="teachers-left mt-50">
                         <div class="hero">
-                            <img src="{{asset('/storage/veteran/' . $active->img)}}" alt="O'qituvchi">
+                            <img src="{{ asset('/storage/active/' . $active->img) }}" alt="{{ __('actives.photo_alt') }}">
                         </div>
                         <div class="name">
                             <h6>{{$active->name}}</h6>

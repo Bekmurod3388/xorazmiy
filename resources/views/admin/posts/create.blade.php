@@ -25,13 +25,31 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="header">Sarlavha</label>
-                            <input type="text" name="header" class="form-control" id="header" placeholder="Sarlavha">
+                            <label>Sarlavha (UZ)</label>
+                            <input type="text" name="header_uz" class="form-control" placeholder="Sarlavha (UZ)">
                         </div>
                         <div class="form-group">
-                            <label for="description">Matn</label>
-                            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
+                            <label>Заголовок (RU)</label>
+                            <input type="text" name="header_ru" class="form-control" placeholder="Заголовок (RU)">
                         </div>
+                        <div class="form-group">
+                            <label>Title (EN)</label>
+                            <input type="text" name="header_en" class="form-control" placeholder="Title (EN)">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Matn (UZ)</label>
+                            <textarea class="form-control" name="description_uz" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Текст (RU)</label>
+                            <textarea class="form-control" name="description_ru" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Text (EN)</label>
+                            <textarea class="form-control" name="description_en" rows="6"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
                             <input type="file" name="img" class="form-control" id="img">

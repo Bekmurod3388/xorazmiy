@@ -37,22 +37,34 @@ class VeteranController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
-        ]);
+    {$request->validate([
+        'name_uz' => 'required|string|max:255',
+        'name_ru' => 'nullable|string|max:255',
+        'name_en' => 'nullable|string|max:255',
+
+        'desc_uz' => 'required|string',
+        'desc_ru' => 'nullable|string',
+        'desc_en' => 'nullable|string',
+
+        'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
+    ]);
+
         $uuid = Str::uuid()->toString();
         $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
         $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
+
         Veteran::create([
-            'name' => $request->name,
-            'desc' => $request->desc,
+            'name_uz' => $request->name_uz,
+            'name_ru' => $request->name_ru,
+            'name_en' => $request->name_en,
+
+            'desc_uz' => $request->desc_uz,
+            'desc_ru' => $request->desc_ru,
+            'desc_en' => $request->desc_en,
+
             'img' => $fileName,
-
-
         ]);
+
         return redirect()->route('admin.veteran.index')->with('success', 'Faxriy qo\'shildi');
 
     }
@@ -63,7 +75,7 @@ class VeteranController extends Controller
      * @param  \App\Models\Veteran  $veteran
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Veteran $veteran)
+    public function show(string $locale, Veteran $veteran)
     {
         return view('veteran', compact('veteran'));
     }
@@ -89,26 +101,32 @@ class VeteranController extends Controller
     public function update(Request $request, Veteran $veteran)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'img' => '',
+        'name_uz' => 'required|string|max:255',
+        'name_ru' => 'nullable|string|max:255',
+        'name_en' => 'nullable|string|max:255',
+
+        'desc_uz' => 'required|string',
+        'desc_ru' => 'nullable|string',
+        'desc_en' => 'nullable|string',
+
+        'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
+    ]);
+
+        $data = $request->only([
+            'name_uz','name_ru','name_en',
+            'desc_uz','desc_ru','desc_en',
         ]);
+
         if ($request->hasFile('img')) {
             $uuid = Str::uuid()->toString();
             $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
             $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
-            $veteran->update([
-                'name' => $request->name,
-                'desc' => $request->desc,
-                'img' => $fileName,
-            ]);
-        } else {
-            $veteran->update($request->all());
+            $data['img'] = $fileName;
         }
 
+        $veteran->update($data);
 
-        return redirect()->route('admin.veteran.index')
-            ->with('success', 'Veteran yangilandi');
+        return redirect()->route('admin.veteran.index')->with('success', 'Veteran yangilandi');
     }
 
     /**

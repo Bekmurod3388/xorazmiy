@@ -39,7 +39,8 @@
                         <h3>{{$post->header}}</h3>
                         <ul>
                             <li><a href="#"><i class="fa fa-calendar"></i>{{$post->created_at->format('d.m.Y')}}</a></li>
-                            <li><a href="#"><i class="fa fa-eye"></i>Ko'rildi: {{$post->viewed}}</a></li>
+                            <li><a href="#"><i class="fa fa-eye"></i>{{ __('news.viewed') }}: {{ $post->viewed }}</a></li>
+
                         </ul>
                         <p>{{$post->description}}
                         </p>

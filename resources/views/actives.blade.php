@@ -10,10 +10,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="{{asset('/storage/veteran/' . $post->img)}}" alt="Faollar">
+                            <img src="{{ asset('/storage/active/' . $post->img) }}" alt="{{ __('actives.photo_alt') }}">
                         </div>
                         <div class="cont">
-                            <a href="{{route('active',$post->id)}}"><h6>{{$post->name}}</h6></a>
+                            <a href="{{ route('active', ['locale'=>app()->getLocale(), 'active'=>$post->id]) }}">
+                                <h6>{{ $post->name }}</h6>
+                            </a>
 
                         </div>
                     </div> <!-- singel teachers -->

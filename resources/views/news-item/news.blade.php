@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-banner-cont">
-                    <h2>Yangiliklar</h2>
+                    <h2>{{ __('news.title') }}</h2>
 
                 </div>  <!-- page banner cont -->
             </div>
@@ -48,10 +48,13 @@
                         <img src="{{asset('/storage/posts/' . $post->img)}}" alt="rasm" width="100%" height="auto">
                     </div>
                     <div class="blog-cont">
-                        <a href="{{route('news-item',$post->id)}}"><h3>{{$post->header}}</h3></a>
+                        <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $post->id]) }}">
+
+                        <h3>{{ $post->header }}</h3>
+                        </a>
                         <ul>
                             <li><a href="#"><i class="fa fa-calendar"></i>{{$post->created_at->format('d.M.Y')}}</a></li>
-                            <li><a href="#"><i class="fa fa-eye"></i>Ko'rildi: {{$post->viewed}}</a></li>
+                            <li><a href="#"><i class="fa fa-eye"></i>{{ __('news.viewed') }}: {{ $post->viewed }}</a></li>
                         </ul>
                         <p>{{ \Illuminate\Support\Str::limit($post->description, 150, '...') }}</p>
                     </div>

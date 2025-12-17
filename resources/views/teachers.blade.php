@@ -9,10 +9,14 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-teachers mt-30 text-center">
                         <div class="image">
-                            <img src="{{asset('/storage/veteran/' . $post->img)}}" alt="O'qituvchilar">
+                            <img src="{{ asset('/storage/teacher/' . $post->img) }}" alt="{{ __('teachers.photo_alt') }}">
+
                         </div>
                         <div class="cont">
-                            <a href="{{route('teacher',$post->id)}}"><h6>{{$post->name}}</h6></a>
+                            <a href="{{ route('teacher', ['locale'=>app()->getLocale(), 'teacher'=>$post->id]) }}">
+                                <h6>{{ $post->name }}</h6>
+                            </a>
+
 
                         </div>
                     </div> <!-- singel teachers -->

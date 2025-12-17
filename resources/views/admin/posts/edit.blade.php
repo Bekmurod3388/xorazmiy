@@ -25,13 +25,31 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="header">Sarlavha</label>
-                            <input type="text" name="header" class="form-control" id="header" placeholder="Sarlavha" value="{{$post->header}}">
+                            <label>Sarlavha (UZ)</label>
+                            <input type="text" name="header_uz" class="form-control" value="{{ $post->header_uz }}">
                         </div>
                         <div class="form-group">
-                            <label for="description">Matn</label>
-                            <textarea  class="form-control"  name="description" id="description" rows="10">{!! $post->description !!}</textarea>
+                            <label>Заголовок (RU)</label>
+                            <input type="text" name="header_ru" class="form-control" value="{{ $post->header_ru }}">
                         </div>
+                        <div class="form-group">
+                            <label>Title (EN)</label>
+                            <input type="text" name="header_en" class="form-control" value="{{ $post->header_en }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Matn (UZ)</label>
+                            <textarea class="form-control" name="description_uz" rows="6">{{ $post->description_uz }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Текст (RU)</label>
+                            <textarea class="form-control" name="description_ru" rows="6">{{ $post->description_ru }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Text (EN)</label>
+                            <textarea class="form-control" name="description_en" rows="6">{{ $post->description_en }}</textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
                             <input type="file" name="img" class="form-control" id="img">

@@ -39,21 +39,36 @@ class ActiveController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
+            'name_uz' => 'required|string|max:255',
+            'name_ru' => 'nullable|string|max:255',
+            'name_en' => 'nullable|string|max:255',
+
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'nullable|string',
+            'desc_en' => 'nullable|string',
+
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
         $uuid = Str::uuid()->toString();
         $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-        $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
+
+        // ✅ active papka
+        $request->img->move(public_path('../storage/app/public/active'), $fileName);
+
         Active::create([
-            'name' => $request->name,
-            'desc' => $request->desc,
+            'name_uz' => $request->name_uz,
+            'name_ru' => $request->name_ru,
+            'name_en' => $request->name_en,
+
+            'desc_uz' => $request->desc_uz,
+            'desc_ru' => $request->desc_ru,
+            'desc_en' => $request->desc_en,
+
             'img' => $fileName,
-
-
         ]);
-        return redirect()->route('admin.active.index')->with('success', 'Faol qo\'shildi');
+
+        return redirect()->route('admin.active.index')->with('success', "Faol qo'shildi");
 
     }
 
@@ -63,7 +78,7 @@ class ActiveController extends Controller
      * @param  \App\Models\Active $active
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Active $active)
+    public function show(string $locale, Active $active)
     {
         return view('active', compact('active'));
     }
@@ -89,26 +104,32 @@ class ActiveController extends Controller
     public function update(Request $request, Active $active)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'img' => '',
+            'name_uz' => 'required|string|max:255',
+            'name_ru' => 'nullable|string|max:255',
+            'name_en' => 'nullable|string|max:255',
+
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'nullable|string',
+            'desc_en' => 'nullable|string',
+
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
+        $data = $request->only([
+            'name_uz','name_ru','name_en',
+            'desc_uz','desc_ru','desc_en',
+        ]);
+
         if ($request->hasFile('img')) {
             $uuid = Str::uuid()->toString();
             $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-            $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
-            $active->update([
-                'name' => $request->name,
-                'desc' => $request->desc,
-                'img' => $fileName,
-            ]);
-        } else {
-            $active->update($request->all());
+            $request->img->move(public_path('../storage/app/public/active'), $fileName);
+            $data['img'] = $fileName;
         }
 
+        $active->update($data);
 
-        return redirect()->route('admin.active.index')
-            ->with('success', 'Faol yangilandi');
+        return redirect()->route('admin.active.index')->with('success', "Faol yangilandi");
     }
 
     /**

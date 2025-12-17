@@ -39,21 +39,35 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'header' => 'required',
-            'description' => 'required',
+            'header_uz' => 'required|string|max:255',
+            'header_ru' => 'required|string|max:255',
+            'header_en' => 'required|string|max:255',
+
+            'description_uz' => 'required|string',
+            'description_ru' => 'required|string',
+            'description_en' => 'required|string',
+
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
         $uuid = Str::uuid()->toString();
         $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
         $request->img->move(public_path('../storage/app/public/posts'), $fileName);
+
         Post::create([
-            'header' => $request->header,
-            'description' => $request->description,
+            'header_uz' => $request->header_uz,
+            'header_ru' => $request->header_ru,
+            'header_en' => $request->header_en,
+
+            'description_uz' => $request->description_uz,
+            'description_ru' => $request->description_ru,
+            'description_en' => $request->description_en,
+
             'img' => $fileName,
-
-
         ]);
-        return redirect()->route('admin.posts.index')->with('success', 'Yangilik muvaffaqiyatli qo\'shildi.');
+
+        return redirect()->route('admin.posts.index')
+            ->with('success', 'Post created successfully');
     }
 
     /**
@@ -62,7 +76,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Post $post)
+    public function show(string $locale, Post $post)
     {
         Post::where('id', $post->id)
             ->update([
@@ -93,26 +107,33 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $request->validate([
-            'header' => 'required',
-            'description' => 'required',
-            'img' => '',
+            'header_uz' => 'required|string|max:255',
+            'header_ru' => 'required|string|max:255',
+            'header_en' => 'required|string|max:255',
+
+            'description_uz' => 'required|string',
+            'description_ru' => 'required|string',
+            'description_en' => 'required|string',
+
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
+        $data = $request->only([
+            'header_uz','header_ru','header_en',
+            'description_uz','description_ru','description_en',
+        ]);
+
         if ($request->hasFile('img')) {
             $uuid = Str::uuid()->toString();
             $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
             $request->img->move(public_path('../storage/app/public/posts'), $fileName);
-            $post->update([
-                'header' => $request->header,
-                'description' => $request->description,
-                'img' => $fileName,
-            ]);
-        } else {
-            $post->update($request->all());
+            $data['img'] = $fileName;
         }
 
+        $post->update($data);
 
         return redirect()->route('admin.posts.index')
-            ->with('success', 'Новости успешно обновлено');
+            ->with('success', 'Post updated successfully');
     }
 
     /**

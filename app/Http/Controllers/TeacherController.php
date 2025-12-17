@@ -40,21 +40,36 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
+            'name_uz' => 'required|string|max:255',
+            'name_ru' => 'nullable|string|max:255',
+            'name_en' => 'nullable|string|max:255',
+
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'nullable|string',
+            'desc_en' => 'nullable|string',
+
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
         $uuid = Str::uuid()->toString();
         $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-        $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
+
+        // ✅ teacher papka
+        $request->img->move(public_path('../storage/app/public/teacher'), $fileName);
+
         Teacher::create([
-            'name' => $request->name,
-            'desc' => $request->desc,
+            'name_uz' => $request->name_uz,
+            'name_ru' => $request->name_ru,
+            'name_en' => $request->name_en,
+
+            'desc_uz' => $request->desc_uz,
+            'desc_ru' => $request->desc_ru,
+            'desc_en' => $request->desc_en,
+
             'img' => $fileName,
-
-
         ]);
-        return redirect()->route('admin.teacher.index')->with('success', 'O\'qituvchi qo\'shildi');
+
+        return redirect()->route('admin.teacher.index')->with('success', "O'qituvchi qo'shildi");
 
     }
 
@@ -64,7 +79,7 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher $teacher
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show(Teacher $teacher)
+    public function show(string $locale, Teacher $teacher)
     {
         return view('teacher', compact('teacher'));
     }
@@ -90,26 +105,32 @@ class TeacherController extends Controller
     public function update(Request $request, Teacher $teacher)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'img' => '',
+            'name_uz' => 'required|string|max:255',
+            'name_ru' => 'nullable|string|max:255',
+            'name_en' => 'nullable|string|max:255',
+
+            'desc_uz' => 'required|string',
+            'desc_ru' => 'nullable|string',
+            'desc_en' => 'nullable|string',
+
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:16000',
         ]);
+
+        $data = $request->only([
+            'name_uz','name_ru','name_en',
+            'desc_uz','desc_ru','desc_en',
+        ]);
+
         if ($request->hasFile('img')) {
             $uuid = Str::uuid()->toString();
             $fileName = $uuid . '-' . time() . '.' . $request->img->extension();
-            $request->img->move(public_path('../storage/app/public/veteran'), $fileName);
-            $teacher->update([
-                'name' => $request->name,
-                'desc' => $request->desc,
-                'img' => $fileName,
-            ]);
-        } else {
-            $teacher->update($request->all());
+            $request->img->move(public_path('../storage/app/public/teacher'), $fileName);
+            $data['img'] = $fileName;
         }
 
+        $teacher->update($data);
 
-        return redirect()->route('admin.teacher.index')
-            ->with('success', 'O\'qituvchi yangilandi');
+        return redirect()->route('admin.teacher.index')->with('success', "O'qituvchi yangilandi");
     }
 
     /**

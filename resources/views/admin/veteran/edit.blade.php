@@ -25,13 +25,31 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="header">Ismi sharifi</label>
-                            <input type="text" name="name" class="form-control" id="header" placeholder="FIO" value="{{$posts->name}}">
+                            <label>Ismi sharifi (UZ)</label>
+                            <input type="text" name="name_uz" class="form-control" value="{{ $posts->name_uz }}">
                         </div>
                         <div class="form-group">
-                            <label for="description">Faxriy haqida</label>
-                            <textarea  class="form-control"  name="desc" id="description" rows="10">{!! $posts->desc !!}</textarea>
+                            <label>ФИО (RU)</label>
+                            <input type="text" name="name_ru" class="form-control" value="{{ $posts->name_ru }}">
                         </div>
+                        <div class="form-group">
+                            <label>Full name (EN)</label>
+                            <input type="text" name="name_en" class="form-control" value="{{ $posts->name_en }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Faxriy haqida (UZ)</label>
+                            <textarea class="form-control" name="desc_uz" rows="10">{{ $posts->desc_uz }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Описания (RU)</label>
+                            <textarea class="form-control" name="desc_ru" rows="10">{{ $posts->desc_ru }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Description (EN)</label>
+                            <textarea class="form-control" name="desc_en" rows="10">{{ $posts->desc_en }}</textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="img">Rasm qo'shish</label>
                             <input type="file" name="img" class="form-control" id="img">

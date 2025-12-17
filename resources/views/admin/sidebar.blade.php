@@ -38,12 +38,12 @@
                         <p>O'qituvchilar</p>
                     </a>
                 </li>
-                <li class="nav-item {{  request()->routeIs('admin.olimpic.index') ? 'active' : '' }}">
-                    <a href="{{route('admin.olimpic.index')}}">
-                        <i class="fas fa-user"></i>
-                        <p>Olimpiadachilar</p>
-                    </a>
-                </li>
+{{--                <li class="nav-item {{  request()->routeIs('admin.olimpic.index') ? 'active' : '' }}">--}}
+{{--                    <a href="{{route('admin.olimpic.index')}}">--}}
+{{--                        <i class="fas fa-user"></i>--}}
+{{--                        <p>Olimpiadachilar</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="nav-item {{  request()->routeIs('admin.active.index') ? 'active' : '' }}">
                     <a href="{{route('admin.active.index')}}">
                         <i class="fas fa-user"></i>

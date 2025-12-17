@@ -12,7 +12,9 @@
                             <img src="{{asset('/storage/veteran/' . $post->img)}}" alt="O'qituvchilar">
                         </div>
                         <div class="cont">
-                            <a href="{{route('veteran',$post->id)}}"><h6>{{$post->name}}</h6></a>
+                            <a href="{{ route('veteran', ['locale'=>app()->getLocale(), 'veteran'=>$post->id]) }}">
+                                <h6>{{ $post->name }}</h6>
+                            </a>
 
                         </div>
                     </div> <!-- singel teachers -->
