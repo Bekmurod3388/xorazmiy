@@ -31,7 +31,7 @@
                             <img src="{{asset('fasset/train.png')}}" alt="Direktor">
                         </div>
                         <div class="name">
-                            <h6>Matyoqubova Gulshoda</h6>
+                            <h6>Ro'zmetov Qudrat</h6>
 
                         </div>
                         <div class="social">
@@ -57,25 +57,27 @@
                                 <div class="dashboard-cont">
                                     <div class="singel-dashboard pt-40">
                                         <h5>Ma'lumotnoma</h5>
-                                        <p>1980 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 2002-yilda Urganch davlat universitetini tugatgan.</p>
+                                        <p>1967 - yilda tug'ilgan. Ma'lumoti Oliy, Millati: o'zbek. 1991-yilda Samarqand davlat pedagogika universitetini tugatgan.</p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Kasbiy faoliyati</h5>
                                         <p>
-                                            1997-2002 yy. -  Urganch davlat  universiteti talabasi <br>
-                                            1998-2001 yy. -  Al-Xorazmiy IMI o'qituvchi <br>
-                                            2001-2012 yy. -  28-umumta'lim maktabida o'qituvchi
+                                            1984-1991 yy.-   Samarqand davlat  universiteti talabasi <br>
+                                            1986-1988 yy -   Xarbiy xizmatda <br>
+                                            1991-1992 yy .-  Xorazm viloyati Shovot tumanidagi Krupskaya nomli maktabda  o'qituvchi
                                             <br>
-                                            2012-2013 yy. -  Shovot tumani XTMFMTTE bo'limi Tashxis Markazi rahbari <br>
-                                            2013-2022 yy. -  28-umumta'lim maktabida  O'IB direktor o'rinbosari
+                                            1992-2010 yy-    Xorazm viloyati Shovot tumanidagi 1-IMI da tarbiyachi <br>
+                                            2011-2021 yy.  - Xorazm viloyati Shovot tumanidagi 1-IMI da  O'IB direktor o'rinbosari
                                             <br>
-                                            2022 y. h.v   -  Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan
-                                            maktab-internatida o'quv ishlari bo'yicha direktor  o'rinbosari
+                                            2021 y. h.v       -  Xorazm viloyati Shovot tumani Al-Xorazmiy nomidagi Xalqaro fizika va
+                                            matematika maktab-internatida  o'quv ishlari bo'yicha direktor  o'rinbosari
+                                            <br>
+
                                         </p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>Bog'lanish uchun:</h5>
-                                        <p><i class="fa fa-phone"></i>Tel: +998-90-957-98-48<b></b></p>
+                                        <p><i class="fa fa-phone"></i>Tel: <b>+998919126376</b></p>
                                         <p><i class = "fa fa-envelope"></i> E-pochta: </p>
                                         <p>Qabul kunlari: Dushanba - Juma soat 10<sup>00</sup> dan 12<sup>00</sup> gacha</p>
                                     </div> <!-- singel dashboard -->

@@ -1,4 +1,3 @@
-
 <footer id="footer-part">
     <div class="footer-top pt-40 pb-70">
         <div class="container">
@@ -6,15 +5,15 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-about mt-40">
                         <div class="logo">
-                            <a href="#"><img src="{{asset('logo.svg')}}" width="160px" alt="Logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%"></a>
+                            <a href="#"><img src="{{asset('texnikum_img/logo_texnikum.png')}}" width="160px" alt="Logo"></a>
                         </div>
-                        <p class="header"> Prezident ta'lim muassasalari agentligi tizimidagi Shovot tuman ixtisoslashtirilgan maktab-internati</p>
-{{--                        <ul class="mt-20">--}}
-{{--                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>--}}
-{{--                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-{{--                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
-{{--                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>--}}
-{{--                        </ul>--}}
+                        <p>O'zbekiston Respublikasi, Xorazm viloyati, Urganch tumani Chandirqiyot qishlog’i Qiyot mahallasi Zafarli ko’cha (№ 1 – Mashrut)</p>
+                        <ul class="mt-20">
+                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://t.me/+YWnl_WpB7nYyZjVi"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="https://utktt.uz"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.instagram.com/utktt_texnikum/?next=https%3A%2F%2Fwww.instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div> <!-- footer about -->
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -50,7 +49,7 @@
                                     <i class="fa fa-home"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>Xorazm vil., Shovot tumani, K. Otaniyozov, 65</p>
+                                    <p>Xorazm vil., Urganch tumani, Chandirqiyot, Zafarli ko'cha</p>
                                 </div>
                             </li>
                             <li>
@@ -58,7 +57,7 @@
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>+998-(97)-453-28-27</p>
+                                    <p>+998-(93)-337-81-10</p>
                                 </div>
                             </li>
                             <li>
@@ -66,7 +65,7 @@
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>ixm309@piima.uz</p>
+                                    <p>utkttexnikumi@gmail.com</p>
                                 </div>
                             </li>
                         </ul>
@@ -81,7 +80,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright text-md-left text-center pt-15">
-                        <p><a target="_blank" href="http://www.amusoft.uz">amusoft.uz</a> </p>
+                        <p><a target="_blank" href="https://www.w3soft.uz">w3soft.uz</a> </p>
                     </div>
                 </div>
                 <div class="col-md-4">

@@ -25,6 +25,7 @@
                             <th scope="col">Titul</th>
                             <th scope="col">Tekst</th>
                             <th scope="col">Ko'rilgan</th>
+                            <th scope="col">Rasmi</th>
                             <th scope="col">Amallar</th>
                         </tr>
                         </thead>
@@ -35,6 +36,8 @@
                                 <td>{{$new->header}}</td>
                                 <td>{{$new->description}}</td>
                                 <td>{{$new->viewed}}</td>
+                                <td><img src="{{asset('/storage/posts/' . $new->img)}}" alt="rasm" width="100%" height="auto"></td>
+                               
                                 <td class="col-2">
                                     <form action="{{ route('admin.posts.destroy',$new->id) }}" method="POST">
                                         <a class="btn btn-warning btn-sm" href="{{ route('admin.posts.edit',$new->id) }}">

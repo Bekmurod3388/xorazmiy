@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group([
+    'prefix' => '{locale}',
+    'where' => ['locale' => 'uz|ru|en'],
+], function () {
 Route::get('/', [\App\Http\Controllers\HomeController::class,'news'])->name('index');
 Route::get('/news',[App\Http\Controllers\PostController::class, 'news'])->name('news');
 Route::get('/news/{post}', [App\Http\Controllers\PostController::class, 'show'])->name('news-item');
@@ -37,6 +42,11 @@ Route::post('/contact', [\App\Http\Controllers\MessageController::class, 'store'
 Route::get('/for_parents',[\App\Http\Controllers\OnaController::class,'index'])->name('ota');
 Route::get('/library',[\App\Http\Controllers\ElectronicLibraryController::class,'electronic'])->name('electronic');
 Route::get('/download',[\App\Http\Controllers\ElectronicLibraryController::class,'download'])->name('download');
+});
+
+
+
+
 Auth::routes([
     'confirm' => false,
     'login' => true,
