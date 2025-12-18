@@ -2,43 +2,64 @@
 
 @section('custom_css')
    <style>
-    /* NEWS CARD STYLES */
-    .news-card {
-    background: #fff;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    height: 100%; /* Balandlikni to'liq egallash */
-    display: flex;
-    flex-direction: column; /* Elementlarni ustma-ust joylash */
-    }
+       .news-card {
+           border-radius: 8px;
+           overflow: hidden;
+           box-shadow: 0 0 15px rgba(0,0,0,0.05);
+           display: flex;
+           flex-direction: column;
+           height: 100%; /* Kartochka ustun bo'yi to'liq cho'ziladi */
+       }
 
-    .news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
+       /* Rasm sozlamalari - ENG MUHIM QISMI */
+       .news-img-wrapper {
+           width: 100%;
+           height: 200px; /* Barcha rasmlar aniq 200px bo'ladi */
+       }
 
-    /* RASM BLOKI */
-    .news-img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 220px; /* Rasm balandligi qat'iy */
-    overflow: hidden;
-    }
+       .news-img-wrapper img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover; /* Rasm cho'zilmaydi, ortiqchasi qirqib tashlanadi */
+           object-position: center;
+       }
 
-    .news-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Rasm cho'zilmasligi uchun */
-    transition: transform 0.5s ease;
-    }
+       /* Matn qismi */
+       .news-body {
+           padding: 20px;
+           display: flex;
+           flex-direction: column;
+           flex-grow: 1; /* Bo'sh joyni egallaydi */
+       }
 
-    .news-card:hover .news-img-wrapper img {
-    transform: scale(1.08); /* Hoverda sal kattalashish */
-    }
+       .news-title {
+           font-size: 18px;
+           font-weight: bold;
+           color: #333;
+           margin-bottom: 10px;
+           display: block;
+           line-height: 1.3;
+       }
 
+       .news-desc {
+           font-size: 14px;
+           color: #666;
+           margin-bottom: 15px;
+       }
+
+       .read-more-link {
+           color: #007bff;
+           text-decoration: none;
+           font-weight: 600;
+       }
+
+       /* Agar sarlavha juda uzun bo'lsa ham buzilmasligi uchun */
+       .news-title {
+           display: -webkit-box;
+           -webkit-line-clamp: 2; /* 2 qatordan oshsa kesadi */
+           -webkit-box-orient: vertical;
+           overflow: hidden;
+       }
     /* SANA */
     .date-badge {
     position: absolute;
@@ -55,50 +76,7 @@
     }
 
     /* TEXT QISMI (BODY) */
-    .news-body {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Qolgan joyni egallaydi */
-    }
 
-    /* SARLAVHA */
-    .news-title {
-    display: block;
-    color: #2c3e50;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    margin-bottom: 12px;
-    line-height: 1.4;
-    transition: color 0.3s;
-
-    /* 2 qatordan oshsa kesish */
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 50px; /* 2 qator uchun taxminiy balandlikni band qilish */
-    }
-
-    .news-title:hover {
-    color: #007bff;
-    text-decoration: none;
-    }
-
-    /* TAVSIF (Description) */
-    .news-desc {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-
-    /* 3 qatordan oshsa kesish */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    }
 
     /* BATAFSIL TUGMASI BLOKI */
     .read-more-wrapper {
@@ -366,38 +344,40 @@
             </div>
             <div class="row">
                 @foreach($posts as $new)
-                    <!-- mb-4: pastdan masofa, d-flex: ustun ichida card cho'zilishi uchun -->
-                    <div class="col-lg-4 col-md-6 mb-4 d-flex">
-                        <div class="news-card">
+                    <!-- d-flex align-items-stretch: Kartochkalarni bir xil balandlikda bo'lishini ta'minlaydi -->
+                    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="news-card bg-white w-100"> <!-- w-100 eniga to'liq bo'lishi uchun -->
 
                             <!-- Rasm qismi -->
                             <div class="news-img-wrapper">
-                                <!-- Agar rasm bo'lmasa default rasm qo'yish logikasi (ixtiyoriy) -->
-                                <img src="{{ asset('/storage/posts/' . $new->img) }}" alt="{{ $new->header }}">
-
-                                <span class="date-badge">
-                        <i class="fa fa-calendar mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
-                    </span>
+                                <img src="{{ asset('/storage/posts/' . $new->img) }}" alt="News Image">
                             </div>
 
-                            <!-- Matn qismi -->
+                            <!-- Tana qismi -->
                             <div class="news-body">
+                                <!-- Sana -->
+                                <div class="text-muted small mb-2">
+                                    <i class="fa fa-calendar-alt mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
+                                </div>
+
+                                <!-- Sarlavha -->
                                 <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}" class="news-title">
                                     {{ $new->header }}
                                 </a>
 
+                                <!-- Tavsif -->
                                 <p class="news-desc">
-                                    {{ \Illuminate\Support\Str::limit($new->description, 120, '...') }}
+                                    {{ \Illuminate\Support\Str::limit($new->description, 100, '...') }}
                                 </p>
 
-                                <!-- Batafsil tugmasi -->
-                                <div class="read-more-wrapper">
-                                    <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}" class="read-more-link">
+                                <!-- Tugma (Eng pastda turadi) -->
+                                <div class="mt-auto pt-3">
+                                    <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}"
+                                       class="read-more-link">
                                         {{ __('home.news.read_more') }} <i class="fa fa-angle-right ml-1"></i>
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 @endforeach
