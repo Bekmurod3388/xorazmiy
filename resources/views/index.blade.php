@@ -1,69 +1,126 @@
 @extends('layouts.layout')
 
 @section('custom_css')
-    <style>
-        body { font-family: 'Poppins', sans-serif; color: #555; }
-        h1, h2, h3, h4, h5 { font-weight: 700; color: #333; }
-        .section-title h5 { color: #007bff; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 10px; }
-        .section-title h2 { font-size: 36px; position: relative; padding-bottom: 20px; }
-        .section-title h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 3px; background: #007bff; }
+   <style>
+    /* NEWS CARD STYLES */
+    .news-card {
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%; /* Balandlikni to'liq egallash */
+    display: flex;
+    flex-direction: column; /* Elementlarni ustma-ust joylash */
+    }
 
-        .single-slider::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-        }
-        .slider-cont h1 { color: #fff; font-size: 48px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+    .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
 
-        .creative-card {
-            background: #fff; border: none; border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease;
-            overflow: hidden; margin-bottom: 30px; height: 100%;
-        }
-        .creative-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,123,255,0.2); }
-        .creative-card .icon-box {
-            font-size: 40px; margin-bottom: 20px; color: #007bff;
-            background: #f0f8ff; width: 80px; height: 80px; line-height: 80px;
-            border-radius: 50%; display: inline-block; transition: all 0.3s;
-        }
-        .creative-card:hover .icon-box { background: #007bff; color: #fff; }
-        .creative-card h5 { font-size: 18px; margin-bottom: 15px; }
+    /* RASM BLOKI */
+    .news-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Rasm balandligi qat'iy */
+    overflow: hidden;
+    }
 
-        .symbol-card {
-            background: #f9f9f9; padding: 25px; border-left: 5px solid #007bff;
-            margin-bottom: 20px; border-radius: 5px;
-        }
-        .anthem-box {
-            background: #fff; padding: 30px; border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1); font-style: italic; border: 1px solid #eee;
-        }
+    .news-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rasm cho'zilmasligi uchun */
+    transition: transform 0.5s ease;
+    }
 
-        .video-overlay { background: rgba(0, 56, 128, 0.85); padding: 80px 0; color: #fff; }
-        .feature-item { display: flex; align-items: flex-start; margin-bottom: 30px; }
-        .feature-item .icon {
-            min-width: 60px; height: 60px; background: rgba(255,255,255,0.2);
-            color: #fff; border-radius: 50%; text-align: center; line-height: 60px;
-            margin-right: 20px; font-size: 24px;
-        }
-        .feature-item h4 { color: #fff; font-size: 20px; margin-bottom: 10px; }
-        .feature-item p { color: rgba(255,255,255,0.8); }
+    .news-card:hover .news-img-wrapper img {
+    transform: scale(1.08); /* Hoverda sal kattalashish */
+    }
 
-        .news-card {
-            border: none; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 30px; transition: 0.3s;
-        }
-        .news-card:hover { transform: scale(1.02); }
-        .news-img-wrapper { position: relative; height: 200px; overflow: hidden; }
-        .news-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .date-badge {
-            position: absolute; top: 15px; right: 15px; background: #ffc107;
-            color: #000; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 12px;
-        }
-        .news-body { padding: 25px; }
-        .news-title { font-size: 20px; font-weight: 700; color: #333; display: block; margin-bottom: 10px; }
-        .news-title:hover { color: #007bff; text-decoration: none; }
+    /* SANA */
+    .date-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px); /* Orqa fonni xira qilish */
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 2;
+    }
 
-        .partner-item { filter: grayscale(100%); opacity: 0.6; transition: 0.3s; margin-bottom: 30px; }
-        .partner-item:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+    /* TEXT QISMI (BODY) */
+    .news-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Qolgan joyni egallaydi */
+    }
+
+    /* SARLAVHA */
+    .news-title {
+    display: block;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s;
+
+    /* 2 qatordan oshsa kesish */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 50px; /* 2 qator uchun taxminiy balandlikni band qilish */
+    }
+
+    .news-title:hover {
+    color: #007bff;
+    text-decoration: none;
+    }
+
+    /* TAVSIF (Description) */
+    .news-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+
+    /* 3 qatordan oshsa kesish */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    }
+
+    /* BATAFSIL TUGMASI BLOKI */
+    .read-more-wrapper {
+    margin-top: auto; /* Eng muhim qism: tugmani pastga itaradi */
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* Ajratib turish uchun chiziqcha */
+    }
+
+    .read-more-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: margin-left 0.3s;
+    }
+
+    .read-more-link:hover {
+    margin-left: 5px; /* Hoverda o'ngga siljish */
+    text-decoration: none;
+    }
     </style>
 @endsection
 
@@ -307,36 +364,43 @@
                        class="btn btn-outline-secondary rounded-pill">{{ __('home.news.all') }}</a>
                 </div>
             </div>
-
             <div class="row">
                 @foreach($posts as $new)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="news-card bg-white h-100">
+                    <!-- mb-4: pastdan masofa, d-flex: ustun ichida card cho'zilishi uchun -->
+                    <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                        <div class="news-card">
+
+                            <!-- Rasm qismi -->
                             <div class="news-img-wrapper">
-                                <img src="{{ asset('/storage/posts/' . $new->img) }}" alt="News Image">
+                                <!-- Agar rasm bo'lmasa default rasm qo'yish logikasi (ixtiyoriy) -->
+                                <img src="{{ asset('/storage/posts/' . $new->img) }}" alt="{{ $new->header }}">
+
                                 <span class="date-badge">
-                    <i class="fa fa-calendar mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
-                </span>
+                        <i class="fa fa-calendar mr-1"></i> {{ $new->created_at->format('d.m.Y') }}
+                    </span>
                             </div>
 
+                            <!-- Matn qismi -->
                             <div class="news-body">
                                 <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}" class="news-title">
-                                    {{ \Illuminate\Support\Str::limit($new->header, 50) }}
+                                    {{ $new->header }}
                                 </a>
 
-                                <p class="text-muted small mb-3">
-                                    {{ \Illuminate\Support\Str::limit($new->description, 100, '...') }}
+                                <p class="news-desc">
+                                    {{ \Illuminate\Support\Str::limit($new->description, 120, '...') }}
                                 </p>
 
-                                <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}"
-                                   class="text-primary font-weight-bold" style="font-size: 14px;">
-                                    {{ __('home.news.read_more') }} <i class="fa fa-angle-right ml-1"></i>
-                                </a>
+                                <!-- Batafsil tugmasi -->
+                                <div class="read-more-wrapper">
+                                    <a href="{{ route('news-item', ['locale' => app()->getLocale(), 'post' => $new->id]) }}" class="read-more-link">
+                                        {{ __('home.news.read_more') }} <i class="fa fa-angle-right ml-1"></i>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 @endforeach
-
             </div>
 
         </div>
