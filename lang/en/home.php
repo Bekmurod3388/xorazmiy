@@ -35,6 +35,12 @@ return [
 
         'c6_title' => "Metrology",
         'c6_desc'  => "Metrology.",
+
+        'c7_title' => "Accounting",
+        'c7_desc'  => "Accounting",
+
+        'c8_title' => "Preschool education",
+        'c8_desc'  => "Preschool education",
     ],
 
     'about' => [

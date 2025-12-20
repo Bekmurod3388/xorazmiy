@@ -27,7 +27,7 @@
 
                 <tr>
                     <th scope="row">Yo'ldasheva Muhayyo</th>
-                    <td>01.09.1981</td>
+                    <td>01.10.1981</td>
                     <td>{{ __('structure.positions.deputy_education') }}</td>
                     <td>+998 (93) 337-81-10 <br> muhayyo@urgtex3.uz</td>
                     <td><img src="{{ asset('teacher_image/M.png') }}" width="80px" alt="photo"></td>

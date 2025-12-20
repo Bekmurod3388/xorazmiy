@@ -219,6 +219,22 @@
                         <p class="text-muted small">{{ __('home.category.c6_desc') }}</p>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="creative-card text-center p-4">
+                        <div class="icon-box"><i class="fa fa-user-circle"></i></div>
+                        <h5 class="font-weight-bold">{{ __('home.category.c7_title') }}</h5>
+                        <p class="text-muted small">{{ __('home.category.c7_desc') }}</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="creative-card text-center p-4">
+                        <div class="icon-box"><i class="fa fa-user-circle"></i></div>
+                        <h5 class="font-weight-bold">{{ __('home.category.c8_title') }}</h5>
+                        <p class="text-muted small">{{ __('home.category.c8_desc') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

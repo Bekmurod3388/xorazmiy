@@ -49,6 +49,18 @@
                         </p>
                     </div>
 
+                    <div class="about-cont">
+                        <p align="justify">
+                            {!! nl2br(__('about.sections.text1.text')) !!}
+                        </p>
+                    </div>
+
+                    <div class="about-cont">
+                        <p align="justify">
+                            {!! nl2br(__('about.sections.text2.text')) !!}
+                        </p>
+                    </div>
+
                 </div>
             </div>
 

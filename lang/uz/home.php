@@ -35,6 +35,12 @@ return [
 
         'c6_title' => "Metrologiya",
         'c6_desc'  => "Metrologiya.",
+
+        'c7_title' => "Buxgalteriya",
+        'c7_desc'  => "Buxgalteriya.",
+
+        'c8_title' => "Maktabgacha ta'lim",
+        'c8_desc'  => "Maktabgacha ta'lim.",
     ],
 
     'about' => [

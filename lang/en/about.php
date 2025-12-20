@@ -20,6 +20,14 @@ return [
             'title' => 'On completed financial and economic activities',
             'text' => "Preparation for the autumn–winter season was well organized.\n\nThe campus area was fully landscaped; trees were whitewashed and shaped.\n\nWindows of the учебный building and dormitory were insulated with film.\n\nOld lighting fixtures were replaced with modern LED lights.\n\nWithin the “Yashil Makon” project, 2,000 m² of land was prepared and 270 ornamental and fruit seedlings were planted.",
         ],
+        'text1' => [
+            'title' => "In accordance with the Decree of the President of the Republic of Uzbekistan No. PF-158 dated October 16, 2024 \"On measures to further improve the system of training qualified personnel in vocational education and introduce international educational programs\", the name of the Urgench district multidisciplinary technical school was changed to Urgench district polytechnic school No. 3",
+
+        ],
+        'text2' => [
+            'title' => "In accordance with the Decree of the President of the Republic of Uzbekistan No. PF-190 dated October 23, 2025 \"On measures to improve management efficiency in the vocational education system\", the name of the Polytechnic School No. 3 of the Urgench district was changed to the Technical School No. 3 of the Urgench district",
+
+        ],
     ],
 
     'cards' => [
